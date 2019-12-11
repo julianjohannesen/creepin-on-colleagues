@@ -33,7 +33,8 @@ app.post('/', function(req,res){
 /*
 PORT
 */
-app.listen(3000);
+let port = process.env.PORT || 3000
+app.listen(port);
 
 // const HTTPS = require('https');
 // const HTTP = require('http');
