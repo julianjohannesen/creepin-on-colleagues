@@ -2,6 +2,7 @@ const express = require('express');
 const pug = require('pug');
 const bodyParser = require('body-parser');
 const multer = require('multer');
+const { body, validationResult } = require('express-validator/check');
 
 const upload = multer();
 const app = express();
@@ -25,9 +26,24 @@ app.get('/', function(req,res){
     res.render('form');
 });
 
-app.post('/', function(req,res){
+app.post(
+    // The route
+    '/', 
+    // Validation middleware
+    [
+    // username must be plain text
+    body('username').not().isEmpty().trim().isAlphanumeric().isLength({min: 2, max: 25})
+    ], 
+    // Request/response handler
+    (req, res) => {
+    // Finds the validation errors in this request and wraps them in an object with handy functions
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.status(422).json({ errors: errors.array() });
+    }
+
     console.log(req.body);
-    res.send("received your request")
+    res.send(`${req.body.username} was found.`)
 });
 
 /*
@@ -35,55 +51,3 @@ PORT
 */
 let port = process.env.PORT || 3000
 app.listen(port);
-
-// const HTTPS = require('https');
-// const HTTP = require('http');
-
-// const url = 'https://teamtreehouse.com/';
-// const logError = error => console.error(error);
-// const cb = (response) => {
-
-//     if(response.statusCode === 200){
-
-//         let theData = ''; // this must be set to string
-//         const addData = data => {
-//             theData += data.toString();
-//             return theData;
-//         }
-//         const logData = () => {
-//             try{
-//                 theData = JSON.parse(theData);
-//                 const message = `${theData.name} has ${theData.points.total} points.`
-//                 console.log(message);
-//                 return message;
-//             } catch(error){
-//                 logError("Error parsing data. " + error.message)
-//             }
-//         }
-
-//         response.on('data', addData);
-//         response.on('end', logData);
-
-//     } else {
-    
-//         const message = 'Error getting profile. ' + HTTP.STATUS_CODES[response.statusCode];
-//         const statusCodeError = new Error(message);
-//         logError(statusCodeError);
-
-//     }
-// }
-
-// const getProfile = (url, username) => {
-//     try{
-//         const address = `${url}${username}.json`;
-//         const request = HTTPS.get(address, cb);
-//         request.on('error', logError);
-//         return request;
-//     } catch(error){
-//         logError("Error caught. " + error.message)
-//     }
-// }
-
-// getProfile(url, 'julianj');
-
-

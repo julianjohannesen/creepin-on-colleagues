@@ -1,11 +1,8 @@
-html
-html
-    head
-        title Form Tester
-    body
+extends layout
+    block content
         form(action = "/", method = "POST")
             div
                 label(for = "username") Username:
                 input(name = "username" type = "text" value = "")
             br
-            button(type = "submit") Submit
+            button(type = "submit") Creep
