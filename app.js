@@ -1,4 +1,5 @@
 const express = require("express");
+const favicon = require("serve-favicon");
 const path = require("path");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
@@ -15,6 +16,8 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
+// Serve favicon
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 // HTTP request logger middleware
 app.use(logger('dev'));
 // Parse HTTP request cookies

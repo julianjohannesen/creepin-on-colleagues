@@ -1,6 +1,10 @@
+@import url(../fonts/Roboto-Regular.ttf);
+@import url(../fonts/Roboto-Bold.ttf);
+
 body {
-    padding: 50px;
-    font: 28px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 3vw;
+    font-family: Roboto, sans-serif; 
+    letter-spacing: 0.2pt;
     background-color: darkslategrey;
     color: whitesmoke;
   }
@@ -9,10 +13,17 @@ body {
     color: #00B7FF;
   }
 
+  h1 {
+    font-family: Roboto, sans-serif;
+    letter-spacing: normal;
+    font-size: 5vw;
+  }
+
   div.wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1em;
 
   }
 
@@ -21,23 +32,26 @@ body {
   }
 
   #username-form input {
-    border-top-left-radius: 0.25em;
-    border-bottom-left-radius: 0.25em;
-    padding: 0.75em;
-    font-size: 1.5em;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 1vw 2vw;
+    font-size: 3vw;
     border-right: none;
+    max-width: 40vw;
   }
 
   #username-form button { 
     border-left-width: 0;
-    font-size: 1.5em;
-    border-top-right-radius: 0.25em;
-    border-bottom-right-radius: 0.25em;
+    font-size: 3vw;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     border-style: inset;
     background-color: white;
+    cursor: pointer;
   }
 
   #username-form svg {
-    min-width: 5vw;
+    min-width: 8vw;
     max-width: 10vw;
+    margin: 1vw;
   }
