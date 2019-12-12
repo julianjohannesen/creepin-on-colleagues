@@ -4,7 +4,9 @@
   "description": "A simple Node/Express application to load Treehouse student data.",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www",
+    "devstart": "nodemon ./bin/www",
+    "serverstart": "DEBUG=creepin-on-colleagues:* npm run devstart"
   },
   "engines": {
     "node": "^13.3.0"
