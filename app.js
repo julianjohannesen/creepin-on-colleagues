@@ -28,6 +28,7 @@ app.use(upload.array());
 // Server static files
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Use these routes
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 
