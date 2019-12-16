@@ -27,28 +27,32 @@ router.post(
 	(req, res) => {
 		// Finds the validation errors in this request and wraps them in an object with handy functions
 		const errors = validationResult(req);
+		// If there are errors, returns a json object with an errors property
 		if (!errors.isEmpty()) {
 			return res.status(422).json({ errors: errors.array() });
 		}
-
+		// A holder for fetched data
 		let theData;
+		// The API endpoint
 		let th = `https://teamtreehouse.com/${req.body.username}.json`;
+		// Use request to fetch our data on the server side
 		request(th, function(err, res, body) {
+			// If the response is good, parse the data and save it in theData, else log an error
 			if (res.statusCode === 200) {
 				theData = JSON.parse(body);
-				//console.log(theData)
-				//return theData;
 			} else {
-				console.log("Request module returned an error: ", err);
+				console.error("Request module returned an error: ", err);
 			}
 		});
 
 		console.log(theData.name, theData.points.total, theData.badges.length);
 			
+		// Set up some local variables for the profile page
 		res.locals.name = theData.name;
 		res.locals.points = theData.points.total;
 		res.locals.badges = theData.badges.length;
 
+		// Render the pofile page
 		res.render("profile");
 	}
 );

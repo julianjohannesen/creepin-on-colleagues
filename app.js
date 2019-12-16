@@ -1,6 +1,6 @@
+const path = require("path");
 const express = require("express");
 const favicon = require("serve-favicon");
-const path = require("path");
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
@@ -8,7 +8,7 @@ const multer = require("multer");
 const createError = require("http-errors");
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/users");
+const usersRouter = require("./routes/profile");
 
 const upload = multer();
 const app = express();
