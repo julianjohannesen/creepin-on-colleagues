@@ -8,7 +8,7 @@ const multer = require("multer");
 const createError = require("http-errors");
 
 const indexRouter = require("./routes/index");
-const usersRouter = require("./routes/profile");
+const profileRouter = require("./routes/profile");
 
 const upload = multer();
 const app = express();
@@ -33,7 +33,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Use these routes
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use("/profile", profileRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
