@@ -1,8 +1,9 @@
 const url = 'https://teamtreehouse.com/';
 const cb = (response) => {
 
+    // RECEIVING THE DATA AND PARSING IT
+    // BODYPARSER DOES THIS IN EXPRESS
     if(response.statusCode === 200){
-
         let theData = ''; // this must be set to string
         const addData = data => {
             theData += data.toString();
@@ -18,16 +19,14 @@ const cb = (response) => {
                 logError("Error parsing data. " + error.message)
             }
         }
-
         response.on('data', addData);
         response.on('end', logData);
-
+    // ERROR HANDLING
+    // BODYPARSER AND HTTP-ERRORS HANDLE THIS
     } else {
-    
         const message = 'Error getting profile. ' + HTTP.STATUS_CODES[response.statusCode];
         const statusCodeError = new Error(message);
         logError(statusCodeError);
-
     }
 }
 

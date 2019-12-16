@@ -5,7 +5,7 @@ const logger = require("morgan");
 const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
-const { body, validationResult } = require("express-validator");
+const createError = require("http-errors");
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
@@ -17,9 +17,9 @@ app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
 // Serve favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 // HTTP request logger middleware
-app.use(logger('dev'));
+app.use(logger("dev"));
 // Parse HTTP request cookies
 app.use(cookieParser());
 // Parse HTTP requests with body-parser
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Parse multi-part form data
 app.use(upload.array());
 // Server static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Use these routes
 app.use("/", indexRouter);
@@ -50,40 +50,5 @@ app.use(function(err, req, res, next) {
 	res.status(err.status || 500);
 	res.render("error");
 });
-
-
-/*
-ROUTES
-*/
-
-// app.get('/', function(req,res){
-    //     res.render('form');
-    // });
-    
-    // app.post(
-        //     // The route
-        //     '/',
-        //     // Validation middleware
-        //     [
-            //     // username must be plain text
-            //     body('username').not().isEmpty().trim().isAlphanumeric().isLength({min: 2, max: 25})
-            //     ],
-            //     // Request/response handler
-            //     (req, res) => {
-                //     // Finds the validation errors in this request and wraps them in an object with handy functions
-                //     const errors = validationResult(req);
-                //     if (!errors.isEmpty()) {
-                    //         return res.status(422).json({ errors: errors.array() });
-//     }
-
-//     console.log(req.body);
-//     res.send(`${req.body.username} was found.`)
-// });
-
-/*
-PORT
-*/
-// let port = process.env.PORT || 3000
-// app.listen(port);
 
 module.exports = app;
