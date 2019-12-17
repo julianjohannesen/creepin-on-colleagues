@@ -27,29 +27,32 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 // Parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-// Parse multi-part form data
+// Parse multi-part form data with multr
 app.use(upload.array());
-// Server static files
+// Serve static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Use these routes
 app.use("/", indexRouter);
 app.use("/profile", profileRouter);
 
-// catch 404 and forward to error handler
+// catch 404 and forward to error handler from http-errors
 app.use(function(req, res, next) {
 	next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-	// set locals, only providing error in development
+    // Set message to err.message 
 	res.locals.message = err.message;
+    // In development, req.local.error is set to err
 	res.locals.error = req.app.get("env") === "development" ? err : {};
 
-	// render the error page
+    // Set the response status to err status or 500
 	res.status(err.status || 500);
+	// render the error page
 	res.render("error");
 });
 
+// Export the app for use in bin/www
 module.exports = app;
