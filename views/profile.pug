@@ -1,5 +1,7 @@
 extends layout
 
 block content
-    h1 This is the profile page.
-    p This is from a cookie...
+    div
+        p This is where the profile data should show up.
+        p(class="name") #{name} has #{points} total points and #{badges} badges.
+        //- Add a recent searches feature using cookies

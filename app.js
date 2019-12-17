@@ -1,36 +1,46 @@
-const express = require("express");
-const favicon = require("serve-favicon");
+// Node.js path object
 const path = require("path");
-const createError = require("http-errors");
+// Express library
+const express = require("express");
+// Serve favicon using webmanifest middlewear
+const favicon = require("serve-favicon");
+// Logging middlewear
 const logger = require("morgan");
+// Make response.body ready for use middlewear
 const bodyParser = require("body-parser");
+// Parse cookies middlewear
 const cookieParser = require("cookie-parser");
+// Parse multi part form data middlewear
 const multer = require("multer");
-const { body, validationResult } = require("express-validator");
+// Handle errors middlewear
+const createError = require("http-errors");
 
+// Require these routes
 const indexRouter = require("./routes/index");
 const profileRouter = require("./routes/profile");
 
+// Initialize multer and express
 const upload = multer();
 const app = express();
 
+// Set the view engine and ensure server can find views directory
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
 // Serve favicon
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 // HTTP request logger middleware
-app.use(logger('dev'));
+app.use(logger("dev"));
 // Parse HTTP request cookies
 app.use(cookieParser());
 // Parse HTTP requests with body-parser
 app.use(bodyParser.json());
 // Parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-// Parse multi-part form data with multr
+// Parse multi-part form data with multer
 app.use(upload.array());
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+// Server static files from the public directory
+app.use(express.static(path.join(__dirname, "public")));
 
 // Use these routes
 app.use("/", indexRouter);
@@ -54,5 +64,4 @@ app.use(function(err, req, res, next) {
 	res.render("error");
 });
 
-// Export the app for use in bin/www
 module.exports = app;
