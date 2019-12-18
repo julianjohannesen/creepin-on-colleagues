@@ -13,9 +13,9 @@ router.get("/", function(req, res, next) {
 router.post(
 	// The route
 	"/",
-	// Validation middleware
+	// Validation middleware for request
 	[
-		// username must be plain text
+		// username must be alphanumeric etc.
 		body("username")
 			.not()
 			.isEmpty()
@@ -25,35 +25,30 @@ router.post(
 	],
 	// Request/response handler
 	(req, res) => {
-		// Finds the validation errors in this request and wraps them in an object with handy functions
-		const errors = validationResult(req);
-		// If there are errors, returns a json object with an errors property
-		if (!errors.isEmpty()) {
-			return res.status(422).json({ errors: errors.array() });
-		}
-		// A holder for fetched data
-		let theData;
-		// The API endpoint
-		let th = `https://teamtreehouse.com/${req.body.username}.json`;
-		// Use request to fetch our data on the server side
-		request(th, function(err, res, body) {
-			// If the response is good, parse the data and save it in theData, else log an error
-			if (res.statusCode === 200) {
-				theData = JSON.parse(body);
-			} else {
-				console.error("Request module returned an error: ", err);
+		try {
+			// Finds the validation errors in this request and wraps them in an object with handy functions
+			const errors = validationResult(req);
+			// If there are errors, returns a json object with an errors property
+			if (!errors.isEmpty()) {
+				return res.status(422).json({ errors: errors.array() });
 			}
-		});
 
-		console.log(theData.name, theData.points.total, theData.badges.length);
-			
-		// Set up some local variables for the profile page
-		res.locals.name = theData.name;
-		res.locals.points = theData.points.total;
-		res.locals.badges = theData.badges.length;
-
-		// Render the pofile page
-		res.render("profile");
+			// The Treehouse API endpoint
+			let th = `https://teamtreehouse.com/${req.body.username}.json`;
+			res.json((request(th, function(err, response, body) {
+				// Use request to fetch our data on the server side. request will return error, response and response body objects
+				// If the response is good, parse the data and save it in theData, else log an error
+				if (response.statusCode === 200) {
+					console.log(JSON.parse(body))
+					return JSON.parse(body);
+				} else {
+					console.error("Request module returned an error: ", err);
+				}
+			}))());
+		
+		} catch (err) {
+			console.error("Error caught in router.post callback: ", err);
+		}
 	}
 );
 
