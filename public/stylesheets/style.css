@@ -58,6 +58,7 @@ body {
 
   div.error {
     margin: 0 auto;
-    width: 75%;
-    font-size: 1em;
+    width: 95vh;
+    font-size: .5em;
+    word-wrap: wrap;
   }
