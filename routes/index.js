@@ -55,7 +55,7 @@ router.post(
 		const errors = validationResult(req);
 		// If there are errors, return a response to the client with the error and exit
 		if (!errors.isEmpty()) {
-			return res.status(422).json({ errors: errors.array() });
+			return res.status(422).render("error", { errors: errors.array() });
 		}
 		// If there are no errors, move on to the next callback
 		next();

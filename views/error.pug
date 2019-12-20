@@ -3,5 +3,12 @@ extends layout
 block content
     h1= message
     div.error
-        h2= error.status
-        div #{error.stack}
+        //- if single error
+        if error 
+            h2= error.status
+            div #{error.stack}
+        //- express-validator returns an array of errors
+        else
+            each error in errors
+                h2= error.status
+                div #{error.stack}

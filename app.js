@@ -29,7 +29,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Serve favicon
 app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
-// HTTP request logger middleware
+// Log HTTP request middleware
 app.use(logger("dev"));
 // Parse HTTP request cookies
 app.use(cookieParser());
