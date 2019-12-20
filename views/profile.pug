@@ -2,5 +2,18 @@ extends layout
 
 block content
     div.profile
-        p(class="name") #{profile.name} has #{profile.points.total} total points and #{profile.badges.length} badges.
-        //- Add a recent searches feature using cookies
+        - var points = profile.points.total
+        - var pointsFormatted = Number(points).toLocaleString()
+        p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
+        p Points breakdown:
+        ul.points
+            each point, index in profile.points
+                - var pointFormatted = Number(point).toLocaleString()
+                if point > 0
+                    if index != "total"
+                        li= index + ": " + pointFormatted
+        p Badges include:
+        ul.badges
+            each badge in profile.badges
+                li= badge.name
+

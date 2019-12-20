@@ -37,16 +37,10 @@ router.get("/", function(req, res, next) {
 router.post(
 	// The route
 	"/",
-<<<<<<< HEAD
-	// Validation middleware for request
-	[
-		// username must be alphanumeric etc.
-=======
 
 	// Validate the submitted username using express-validate module
 	[
 		// username must be plain text, etc.
->>>>>>> learning-redirect
 		body("username")
 			.not()
 			.isEmpty()
@@ -54,34 +48,6 @@ router.post(
 			.isAlphanumeric()
 			.isLength({ min: 2, max: 25 })
 	],
-<<<<<<< HEAD
-	// Request/response handler
-	(req, res) => {
-		try {
-			// Finds the validation errors in this request and wraps them in an object with handy functions
-			const errors = validationResult(req);
-			// If there are errors, returns a json object with an errors property
-			if (!errors.isEmpty()) {
-				return res.status(422).json({ errors: errors.array() });
-			}
-
-			// The Treehouse API endpoint
-			let th = `https://teamtreehouse.com/${req.body.username}.json`;
-			res.json((request(th, function(err, response, body) {
-				// Use request to fetch our data on the server side. request will return error, response and response body objects
-				// If the response is good, parse the data and save it in theData, else log an error
-				if (response.statusCode === 200) {
-					console.log(JSON.parse(body))
-					return JSON.parse(body);
-				} else {
-					console.error("Request module returned an error: ", err);
-				}
-			}))());
-		
-		} catch (err) {
-			console.error("Error caught in router.post callback: ", err);
-		}
-=======
 
 	// Handle validation errors
 	(req, res, next) => {
@@ -104,7 +70,6 @@ router.post(
 			.catch(error => {
 				res.render("error", {error});
 			});
->>>>>>> learning-redirect
 	}
 );
 

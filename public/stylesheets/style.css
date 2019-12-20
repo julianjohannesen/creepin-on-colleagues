@@ -66,3 +66,17 @@ body {
   div.profile {
     padding: 2vw;
   }
+
+  div.profile li {
+    list-style-type: none;
+    font-size: 0.5em;
+    margin: 1vw;
+  }
+
+  .badges {
+    columns: 3;
+    column-gap: 1vw;
+  }
+
+  .badges li {
+  }
