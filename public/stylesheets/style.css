@@ -55,3 +55,10 @@ body {
     max-width: 10vw;
     margin: 1vw;
   }
+
+  div.error {
+    margin: 0 auto;
+    width: 95vh;
+    font-size: .5em;
+    word-wrap: wrap;
+  }

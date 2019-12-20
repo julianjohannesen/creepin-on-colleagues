@@ -1,18 +1,29 @@
+// Node.js path object
 const path = require("path");
+// Express library
 const express = require("express");
+// Serve favicon using webmanifest middlewear
 const favicon = require("serve-favicon");
+// Logging middlewear
 const logger = require("morgan");
+// Make response.body ready for use middlewear
 const bodyParser = require("body-parser");
+// Parse cookies middlewear
 const cookieParser = require("cookie-parser");
+// Parse multi part form data middlewear
 const multer = require("multer");
+// Handle errors middlewear
 const createError = require("http-errors");
 
+// Require these routes
 const indexRouter = require("./routes/index");
 const profileRouter = require("./routes/profile");
 
+// Initialize multer and express
 const upload = multer();
 const app = express();
 
+// Set the view engine and ensure server can find views directory
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
@@ -26,28 +37,30 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 // Parse form data
 app.use(bodyParser.urlencoded({ extended: true }));
-// Parse multi-part form data
+// Parse multi-part form data with multer
 app.use(upload.array());
-// Server static files
+// Server static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
 
 // Use these routes
 app.use("/", indexRouter);
 app.use("/profile", profileRouter);
 
-// catch 404 and forward to error handler
+// catch 404 and forward to error handler from http-errors
 app.use(function(req, res, next) {
 	next(createError(404));
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-	// set locals, only providing error in development
+    // Set message to err.message 
 	res.locals.message = err.message;
+    // In development, req.local.error is set to err
 	res.locals.error = req.app.get("env") === "development" ? err : {};
 
-	// render the error page
+    // Set the response status to err status or 500
 	res.status(err.status || 500);
+	// render the error page
 	res.render("error");
 });
 
