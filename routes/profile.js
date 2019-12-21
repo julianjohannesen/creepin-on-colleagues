@@ -1,7 +1,7 @@
 var express = require("express");
 var router = express.Router();
 
-/* GET users listing. */
+/* GET profile page. */
 router.get("/profile", function(req, res, next) {
 	res.render("profile");
 });

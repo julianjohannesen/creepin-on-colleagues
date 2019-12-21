@@ -15,10 +15,6 @@ const multer = require("multer");
 // Handle errors middlewear
 const createError = require("http-errors");
 
-// Require these routes
-const indexRouter = require("./routes/index");
-const profileRouter = require("./routes/profile");
-
 // Initialize multer and express
 const upload = multer();
 const app = express();
@@ -42,9 +38,15 @@ app.use(upload.array());
 // Server static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
 
+// Require these routes
+const indexRouter = require("./routes/index.js");
+const profileRouter = require("./routes/profile.js");
+const aboutRouter = require("./routes/about.js");
+
 // Use these routes
 app.use("/", indexRouter);
 app.use("/profile", profileRouter);
+app.use("/about", aboutRouter);
 
 // catch 404 and forward to error handler from http-errors
 app.use(function(req, res, next) {
