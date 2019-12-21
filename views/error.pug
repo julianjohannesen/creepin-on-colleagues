@@ -9,6 +9,7 @@ block content
             div #{error.stack}
         //- express-validator returns an array of errors
         else
-            each error in errors
-                h2= error.status
-                div #{error.stack}
+            h2= `${status}: ${errors[0].msg} for ${errors[0].param}`
+            p Please enter a valid Treehouse username.
+
+            //- If I get a 404 Not found back from Treehouse, I want to show the user that that username does not exist.
