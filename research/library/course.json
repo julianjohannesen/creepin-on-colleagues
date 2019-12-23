@@ -1,0 +1,1121 @@
+[
+    {
+        "Parts": "3",
+        "Length": "42 min",
+        "Type": "Course",
+        "Title": "Conducting User Interviews",
+        "Description": "Learn how to validate product ideas by identifying an audience, sourcing participants, conducting user interviews, and analyzing the results.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "44 min",
+        "Type": "Course",
+        "Title": "Working with $_GET and $_POST in PHP",
+        "Description": "This course will show you how to work with PHP Superglobals such as $GET and $POST while using a security-conscious mindset. External inputs, like HTML forms, are considered a security vulnerability so you should always filter inputs and escape outputs. Using PHP Superglobals when using external inputs such as HTML forms, cookies, sessions, and web servers will give you a security-conscious mindset that you can apply to all of your projects.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Build a Basic PHP Website",
+        "Description": "This project will show you how to build a simple website using the PHP programming language. The web site, a media library, will let you organize and display your Books, Movies and Music. You could easily use this project to create a website that lets you organize and display any type of item: Branch Locations, Products, Services, Events, even Courses like we have here on Treehouse.",
+        "Topics": "PHP",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "100 min",
+        "Type": "Course",
+        "Title": "Using SQL ORMs with Node.js",
+        "Description": "In this course, you'll learn how to use the Sequelize ORM to leverage the power of SQL within your Node.js applications.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "36 min",
+        "Type": "Course",
+        "Title": "Introducing Dictionaries",
+        "Description": "Another useful Python data structure is the dictionary. Learn how to write one and use one in your day to day Python code.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "65 min",
+        "Type": "Course",
+        "Title": "Python Sequences",
+        "Description": "Discover several types of Python sequences, many ways of sequence iterations, and all of the common sequence operations.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "65 min",
+        "Type": "Course",
+        "Title": "Functions, Packing, and Unpacking",
+        "Description": "Learn the ins and outs of Python functions, how to send and receive values to functions, and all about Python packing and unpacking.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "13 min",
+        "Type": "Course",
+        "Title": "Introducing Tuples",
+        "Description": "Learn about a python data structures that's similar to lists, but with one key difference!",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "82 min",
+        "Type": "Course",
+        "Title": "React Authentication",
+        "Description": "In this course, you will learn how to implement the Basic Authentication scheme in a React application using an Express REST API.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "52 min",
+        "Type": "Course",
+        "Title": "Designing Layouts",
+        "Description": "In this course you'll learn how to apply design principles through a series of examples. Each example will include some component that can be improved, and by making the improvement, you'll develop strong aesthetic sensibilities about things like visual and typographic hierarchy, the use of grids and alignment in layouts, and how to choose colors.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "AJAX Basics",
+        "Description": "AJAX is an important front-end web technology that lets JavaScript communicate with a web server. It lets you load new content without leaving the current page, creating a better, faster experience for your web site's visitors. In this course, you'll learn how AJAX works and how you can use JavaScript to communicate with a web server. We'll use plain JavaScript to create AJAX requests and use the response to dynamically update your web pages. Along the way, you'll build mini-projects to reinforce your learning.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "6",
+        "Length": "120 min",
+        "Type": "Course",
+        "Title": "Build a Simple iPhone App with Swift v5",
+        "Description": "Building the Random Facts app will teach you how to use the Swift language and the Xcode and Interface Builder tools. You will also learn about core concepts such as views and view controllers, creating a data model, and how to refactor your code. Towards the end you will have finished creating a fun app that will get you oriented with the world of iOS development.",
+        "Topics": "iOS",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "C# Basics",
+        "Description": "C# is the most popular programming language in the Microsoft ecosystem of products. C# code is designed to run fast and to be easily maintainable. In C# Basics, we'll learn how to work with C# to write simple programs.",
+        "Topics": "C#",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "82 min",
+        "Type": "Course",
+        "Title": "Design Systems",
+        "Description": "Design Systems are more than just bits of UI and visual guidelines. They're living documents, usually created by companies or design groups, that are intended to guide the creation of user experiences. They often touch upon everything from high level goals and user interface metaphors down to details like buttons and drop shadows. In this course, we'll learn about the fundamentals of design systems.",
+        "Topics": "Design",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "71 min",
+        "Type": "Course",
+        "Title": "Using Cookies and JWTs for Secure Authentication",
+        "Description": "Refactor an existing authentication project by using cookies and JSON Web Token to increase security. Cookies are a way for a browser to store information while tokens are a stand-in or representation for something else.",
+        "Topics": "PHP",
+        "Difficulty": "Advanced"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "115 min",
+        "Type": "Course",
+        "Title": "Asynchronous Programming with JavaScript",
+        "Description": "In this course, you will learn why asynchronous code matters, and how to write code that avoids blocking behavior using three approaches: callbacks, promises, and async/await.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "85 min",
+        "Type": "Course",
+        "Title": "Financial Statement Basics",
+        "Description": "Understanding how to read the story that financial statements tell is a really useful skill and an important part of career development. In this course, we’ll give a basic overview of the 3 main financial statements: the Profit and Loss Statement, the Balance Sheet, and the Cash Flow Statement. We’ll teach what they show you, why it matters, and give you a bunch of practice problems to help retain that knowledge. After completing this course, you will be able to read, understand, and use financial statements and build on that knowledge as you continue to learn about them.",
+        "Topics": "Data Analysis",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "91 min",
+        "Type": "Course",
+        "Title": "Getting Started with PHP Unit Testing",
+        "Description": "For all us imperfect programmers, I have some great news. There are tools that can help you keep those mistakes from breaking your application. They can also help you find and fix bugs faster, while at the same time, preventing those bugs from ever coming back. Many of these tools revolve around testing.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "35 min",
+        "Type": "Course",
+        "Title": "Visual Design Foundations",
+        "Description": "In this course, you'll build your design vocabulary and learn how to describe the basic building blocks of any visual image. We'll start by learning about the elements of design, like line, shape, and form. Then we'll move on to the principles of design, like balance, harmony, and movement. By the end, you'll have a better foundation for discussing design with other team members and you'll be able to make objective observations about what is often subjective subject matter.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "98 min",
+        "Type": "Course",
+        "Title": "Introduction to User Authentication in PHP",
+        "Description": "Do you want users to be able to interact with your site? Do you want users who are active participants in the content you provide? That interaction could be purchasing products or adding products to sell, leaving comments or providing blog posts. No matter which type of interaction your site provides to users, you'll need a way to authenticate those users. In this course we'll lay the foundation for keep your data safe and secure while building a platform for active participation.",
+        "Topics": "PHP",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Continuous Integration with Jenkins",
+        "Description": "Jenkins is a continuous integration server. Integration tests take all the code and other components of your application and integrate it together, then test it to ensure it's working properly. Jenkins can watch repos for version control software like Git or Subversion. When there's a new commit, Jenkins will check it out automatically. It will run your tests, and report the result. It can even be configured to automatically deploy your software to production if all the tests pass. This course is going to show you all the basics of using Jenkins.",
+        "Topics": "Dev Tools",
+        "Difficulty": "Advanced"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "36 min",
+        "Type": "Course",
+        "Title": "Introduction to Regular Expressions",
+        "Description": "Regular Expressions are like having a secret code for telling a computer exactly what you want. Regex, as it's often referred to, is a text string for describing a search pattern. You can think of it as a supercharged version of a find tool. In this course, we'll explore what regular expressions are, and get some practice using them.",
+        "Topics": "Dev Tools",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "101 min",
+        "Type": "Course",
+        "Title": "REST APIs with Express",
+        "Description": "Learn the basics of building out a REST API with Express, a popular framework written for Node.js.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "24 min",
+        "Type": "Course",
+        "Title": "Asynchronous Code in Express",
+        "Description": "In this course, we’ll look more closely at three approaches to handling asynchronous operations in Express: callbacks, promises, and async/await.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "95 min",
+        "Type": "Course",
+        "Title": "CSS Selectors Quickstart",
+        "Description": "An introduction to CSS selectors for JavaScript programmers. This course covers what you need to know about CSS selectors to complete common DOM programming tasks.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "103 min",
+        "Type": "Course",
+        "Title": "Build a REST API with PHP",
+        "Description": "Build a REST API using the Slim Microframework.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "35 min",
+        "Type": "Practice",
+        "Title": "Practice Object Interaction",
+        "Description": "Get more familiar with building different classes, instantiating objects and having those objects interact with one another in a complete app.",
+        "Topic": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "112 min",
+        "Type": "Course",
+        "Title": "Introduction to the Terminal",
+        "Description": "Apps for ordinary users use GUIs you control with a mouse or touchscreen. But developers know the most powerful way to interact with computers is using text, in the terminal. This course will set you on the path to terminal mastery!",
+        "Topics": "Dev Tools",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "13 min",
+        "Type": "Course",
+        "Title": "Java Maps",
+        "Description": "In this course we'll learn how to store key-value pairs by using a Map!",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "72 min",
+        "Type": "Course",
+        "Title": "Templating with Twig",
+        "Description": "Templating languages and tools are used with frameworks like Slim and Laravel to incorporate PHP and logic into static HTML web pages. In this course we will see how to apply Object-Oriented methodology to views (web pages with HTML).",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "14 min",
+        "Type": "Course",
+        "Title": "Java Lists",
+        "Description": "In this course you'll learn how to use Lists to store groups of Objects. You'll also see when to use a List instead of an Array!",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "17 min",
+        "Type": "Course",
+        "Title": "Generics in Java",
+        "Description": "Learn how to pass type parameters to Objects or functions in this course on generics!",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "19 min",
+        "Type": "Course",
+        "Title": "Interfaces in Java",
+        "Description": "Learn how to make more robust and flexible code bases by using interfaces!",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "72 min",
+        "Type": "Course",
+        "Title": "Introducing MVC Frameworks in PHP",
+        "Description": "In this course we will build upon what we have learned about Object-Oriented Programming to build a basic website. By using the Slim Microframework, we will explore common MVC concepts without the framework hiding too much functionality out of the box.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "15 min",
+        "Type": "Course",
+        "Title": "Design Criticism",
+        "Description": "One of the most important parts of design is being able to talk about it with other people. Giving feedback and communicating suggested changes is key to moving forward people and businesses. In this course, you'll learn how to formulate constructive criticism and talk objectively about the subjective topic of design.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "59 min",
+        "Type": "Course",
+        "Title": "Introduction to Churn and Lifetime Value (LTV) Analysis",
+        "Description": "This introduction to Churn and Lifetime Value (LTV) analysis course is designed for absolute beginners to give them exposure to the common business metrics of Churn and LTV. In the course we learn about recurring revenue, churn, LTV, why they matter, and navigate some of the nuances of the metrics.",
+        "Topics": "Data Analysis",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "12 min",
+        "Type": "Practice",
+        "Title": "Practice Creating and Using Functions in Python",
+        "Description": "Practice your function skills",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "78 min",
+        "Type": "Course",
+        "Title": "Building a Portfolio",
+        "Description": "Your portfolio is the most immediate means for a potential employer to decide if you’re a good fit. This course will give you insight into creating and curating a collection of your work that will most accurately reflect what you value as a designer/developer, what might be like to work with you, and finally, what to expect in terms of your output.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Cleaning and Preparing Data",
+        "Description": "We rely on data to answer important questions, whether we are trying to make the best business decisions or determine the effectiveness of a new medical treatment. But our analyses are only as accurate as the data we are using, and incorrect or “dirty” data can lead to incorrect conclusions and assumptions. Data preparation, also called “cleaning” or “scrubbing”, is an important part of ensuring our analyses are accurate and useful.",
+        "Topics": "Data Analysis",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "UX Content Strategy",
+        "Description": "With so many websites and apps offering similar content and features, you need to provide a unique experience to compete - something memorable and enjoyable that resonates with your users. UX Content is how it’s done. From your home page and product descriptions down to your error messages, UX content can turn generic interactions into memorable experiences. By establishing a unique voice and personality, you can create an environment that welcomes, supports, and inspires users during their visit. So in this course, we’ll discuss why UX Content is so important, where you need it, how to create it, and how to ensure it’s effective.",
+        "Topics": "Design",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Introduction to pandas",
+        "Description": "Pandas provides fast, flexible, and expressive data structures that have been designed to make working with relational or “labeled” data not only easy, but also intuitive. It’s the fundamental high-level building block for doing practical and real world data analysis in Python.",
+        "Topics": "Python",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "101 min",
+        "Type": "Course",
+        "Title": "Git Branches and Merging",
+        "Description": "This course introduces the concept of branches in Git and shows practical uses for managing both local development and collaborative workflows.",
+        "Topics": "Dev Tools",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "71 min",
+        "Type": "Course",
+        "Title": "Prototyping with Adobe XD",
+        "Description": "Adobe XD is a visual prototyping tool for PC and Mac. In this course, you'll learn how to use Adobe XD by building a mockup for a travel booking app. By the end, you'll be able to create interactive prototypes that can be shared with others.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Evaluating Design",
+        "Description": "An essential part of the UX design process is measurement and validation. This course will provide an overview of the methods available for measuring the success of a design including A/B testing, surveys and usability testing. It will specifically deep dive into usability testing so that students will learn about what’s involved in running such a test, from preparing a test plan to presenting actionable findings.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "19 min",
+        "Type": "Practice",
+        "Title": "Practice Classes in JavaScript",
+        "Description": "Practice building and working with classes in JavaScript.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "14 min",
+        "Type": "Course",
+        "Title": "Practice Getters and Setters in JavaScript",
+        "Description": "Practice writing and using getters and setters in JavaScript classes.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to QA Engineering",
+        "Description": "Learn how to become an effective test engineer. Testing is something every developer must do to write effective and quality code, but going about what you should test and how to do it can be a challenging question. Quality Assurance is the practice of monitoring other developers' work and creating processes and tests that will ensure the product meets the end user’s expectations and limiting the amount of bugs that are released. This course will teach you how to become a Software Quality Assurance Engineer.",
+        "Topics": "Quality Assurance",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "React Components",
+        "Description": "Components are the core building blocks of a React application. This course will level-up your React skills by providing a better understanding of class vs. functional components, state and lifecycle methods, and how to split your UI into reusable and composable components.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "42 min",
+        "Type": "Course",
+        "Title": "Inheritance in Java",
+        "Description": "In this course we'll learn how to use inheritance to use one class as the foundation for another!",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "React Basics",
+        "Description": "React is a JavaScript library for building user interfaces. React makes building and maintaining the user interface of your application faster and easier by breaking it up into smaller, reusable components. It also helps eliminate the complexity that comes with updating your DOM elements when the user interacts with your application.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "24 min",
+        "Type": "Course",
+        "Title": "Introducing IntelliJ and Unpacking Packages",
+        "Description": "Professional developers don't typically develop in the command line, they use an Integrated Development Environment (IDE) like IntelliJ IDEA. In this course, we'll see how to get started with IntelliJ IDEA and learn how to use packages.",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "119 min",
+        "Type": "Course",
+        "Title": "Algorithms: Sorting and Searching",
+        "Description": "This course will look at algorithms in two categories: sorting and searching. We'll implement well-known sorting algorithms like selection sort, quicksort, and merge sort. You'll also learn basic search algorithms like sequential search and binary search.",
+        "Topics": "Computer Science",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to Data Structures",
+        "Description": "In computer science a data structure is a construct that allows us to organize and store data in our programs. In this course we're going to learn about two introductory data structures - arrays and linked lists! We'll look at common operations and how the runtimes of these operations affect our everyday code. For the rest of the course we're going to bring our knowledge of algorithms and data structures together to solve the problem of sorting data using the merge sort algorithm",
+        "Topics": "Computer Science",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "21 min",
+        "Type": "Practice",
+        "Title": "Practice Object Basics in JavaScript",
+        "Description": "Practice working with object literals in JavaScript.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "2 hours",
+        "Type": "Practice",
+        "Title": "Object-Oriented JavaScript: 'Challenge'",
+        "Description": "Practice your object-oriented JavaScript skills by building a fun and interactive 'Four in a Row' game.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to Wireframing",
+        "Description": "Wireframing is a useful part of the design process. Throughout a website or mobile app project, you will have a lot of ideas and the best way to sort through those ideas is to brainstorm. Wireframes are a visual artifact of brainstorming, and the goal is to make them with minimal effort, as to encourage ideation. Whether you're a designer or not, wireframing is an important skill to have in your toolkit. It's beneficial for product managers, marketers, or anyone else with ideas for a website or mobile app. Wireframes are a valuable tool for visualizing user experiences, iterating on ideas, and sharing ideas with others.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to Algorithms",
+        "Description": "Algorithms are a fundamental topic in computer science, power many of the largest companies today and are used in making many decisions that affect our day to day lives - in obvious places like Google's PageRank algorithm to more obscure use cases like national security and local policing. In this introductory course, we're going to take our first steps towards understanding the world of algorithms and data structures. Before we can study individual algorithms we're going to spend time learning how to evaluate algorithms, how to make comparisons and how to develop algorithmic thinking",
+        "Topics": "Computer Science",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "70 min",
+        "Type": "Course",
+        "Title": "Scraping Data From the Web",
+        "Description": "Almost any information you want is available on the Internet. Web scraping is a key tool for data mining that information allowing for web page exploration and collection for a variety of reporting. The tools and techniques used in this course allow for data to be collected that would otherwise not be easily accessible without robotic assistance.",
+        "Topics": "Python",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "30 min",
+        "Type": "Course",
+        "Title": "Introduction to REST APIs",
+        "Description": "Many of the APIs you'll encounter on the Web use an underlying design idea known as REST, which stands for Representational State Transfer. Understanding what and how a REST API provides will help you build better and stronger APIs for your users.",
+        "Topics": "Dev Tools",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to NumPy",
+        "Description": "NumPy is short for Numerical Python. It is the fundamental package for scientific computing. You will see it at play in just about everywhere Python needs to deal with data. This course gives a gentle introduction to the powerful library.",
+        "Topics": "Python",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "94 min",
+        "Type": "Course",
+        "Title": "Creating User Experiences",
+        "Description": "Join us as we learn the basic principles of User Experience Design and how it shapes everyday interactions with products. By structuring products around users’ needs, we can ensure that the products do their job. You will learn how to meet users where they are, think through intuitive experiences, and create products that more effectively meet both your goals and your end users’ goals. This course will help you think more critically through the steps and decisions a user makes while interacting with your product. If you’re considering a career in User Experience (UX) or want to learn more about it, this course will expose you to how to design and plan around the people who use your product.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Information Architecture",
+        "Description": "In this age of information, it’s not always easy to know how content should be structured - everyone has a different perspective. In this course, you’ll learn about information architecture: what it is, and how it relates to web design and user experience. We’ll learn about the fundamentals of IA components like navigation, labeling, and content organization, as well as techniques to test and evaluate existing website structure. By the end, you’ll know how to organize website content and provide a clear, logical experience for any user.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "76 min",
+        "Type": "Course",
+        "Title": "UX Design Patterns",
+        "Description": "Software is often defined by what makes it different, but in many cases, the same UX and design problems appear over and over again; a pattern, across many applications. Rather than come up with a brand new solution for every problem - a solution that could require a tutorial to educate users - it's often best to turn to familiar solutions that a user will immediately recognize. These solutions are called design patterns, and when it comes to UX, these patterns can solve problems in the user interface and they can also help influence the behavior of users.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "97 min",
+        "Type": "Course",
+        "Title": "JavaScript Quickstart",
+        "Description": "This course is a primer for programmers wanting to get up to speed with the basics of JavaScript. You will learn the fundamental concepts and syntax of the JavaScript programming language.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "94 min",
+        "Type": "Course",
+        "Title": "Data Persistence with Room",
+        "Description": "Storing data is important in any Android app. In this course we'll use the Room library to store data in a SQLite database!",
+        "Topics": "Android",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "29 min",
+        "Type": "Course",
+        "Title": "The JavaScript Ecosystem",
+        "Description": "In this course, we'll explore the exciting JavaScript ecosystem. You'll learn how Node.js helped JavaScript reach new heights, discover applications and tools built with JavaScript, and evaluate popular JavaScript frameworks, libraries, developer roles, and more.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Build a Weather App",
+        "Description": "In this project, we're going to build a weather app together and broaden our understanding of Swift and iOS frameworks. We will start by learning foundational concepts like networking and concurrency while building on our existing knowledge of data modeling, view models and more. We’ll even take a look at how we can structure our code better and construct decoupled classes and structs that lead to greater code reuse. Let's get started!",
+        "Topics": "iOS",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Vue.js Basics",
+        "Description": "Vue.js is a front end JavaScript framework with a gentle learning curve. Vue’s lower barrier to entry, ease of use and fantastic documentation make it a fun and accessible technology. In this course, you’ll learn fundamental concepts that will help you get up and running with Vue. You’ll also gain skills and foundational knowledge that will help prepare you to tackle the complexities of other frameworks.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "97 min",
+        "Type": "Course",
+        "Title": "Android Lists and Adapters",
+        "Description": "A collection of data is often represented in an app in some sort of list. In this course we will learn about the popular Android component called RecyclerView to display and interact with a list of items. We will see how to use some default components as well as building custom lists with our own layouts and adapters.",
+        "Topics": "Android",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "User Authentication with ASP.NET Identity",
+        "Description": "In this course, you'll learn how to leverage user authentication to secure an application and protect your users' data. You'll update an existing ASP.NET MVC application to use Microsoft's ASP.NET Identity system to implement cookie-based authentication.",
+        "Topics": "C#",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "2",
+        "Length": "44 min",
+        "Type": "Course",
+        "Title": "The Landscape of JavaScript",
+        "Description": "JavaScript is everywhere and used in all phases of development from software to hardware. This course walks you through the modern landscape of JavaScript, and what it means to learn and program with JavaScript in 2018 and beyond.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "66 min",
+        "Type": "Course",
+        "Title": "Intermediate Selenium WebDriver",
+        "Description": "Manually testing your website can only take you so far. Learn how to use Selenium WebDriver to automate the process for you, and alert you to problems before your users see them.",
+        "Topics": "Quality Assurance",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "107 min",
+        "Type": "Course",
+        "Title": "Introducing Lists",
+        "Description": "Lists are a powerful data type that allow you to store multiple ordered values in a single container. You are gonna love them.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Python Basics",
+        "Description": "Learn the building blocks of the wonderful general purpose programming language Python.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "6",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Build a Weather App",
+        "Description": "In this course, we will learn about a very common and important element of Android development: downloading data from the Internet! We will request weather forecast data from a free API provided by darksky.net. We will then parse that data (in JSON format) and display it in a single-page app. We will also see how to handle errors and situations when the network is unavailable.",
+        "Topics": "Android",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "112 min",
+        "Type": "Course",
+        "Title": "Object-Oriented JavaScript",
+        "Description": "In this course you'll learn the basics of object-oriented programming in JavaScript along with the new ES2015 Class syntax.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Parsing JSON Using Codable",
+        "Description": "Parsing JSON is one of the more common tasks you'll undertake in Swift, whether it's for an iOS app or server side development. Swift 4 introduced the Codable protocol along with a set of related types to provide a built in solution for this. Over this course, let's explore how to use these types to parse JSON of varying complexity.",
+        "Topics": "iOS",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "44 min",
+        "Type": "Course",
+        "Title": "Environment Variables with PHP",
+        "Description": "In the lifecycle of an application, there are multiple environments such as Development, Testing and Production. Each environment may have its own unique sources and credentials that need to be managed and secured. Environment variables are accessible to any programming language, and allow applications to adapt to their environment while keeping credentials secure.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Introduction to Git",
+        "Description": "Git is a version control system - it helps you manage the different versions of your project files, and helps keep your work safe. This course will show you how Git works, and how to upload your projects to GitHub.",
+        "Topics": "Dev Tools",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "55 min",
+        "Type": "Course",
+        "Title": "Design Thinking",
+        "Description": "Learn the user-centered methods and mindsets that entire businesses are using to improve their product experiences. Throughout this course, we’ll go over how to find the voice of our user, the importance of that voice, and how to create a better experience for our user.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "58 min",
+        "Type": "Course",
+        "Title": "Machine Learning Basics",
+        "Description": "Machine learning encompasses many different ideas, programming languages, frameworks, and approaches to the subject, so the term 'machine learning' is difficult to define in just a sentence or two. But essentially, machine learning is giving a computer the ability to write its own rules and learn about new things, on its own. In this course, we'll explore some of the big ideas, and toward the end, we'll even write a little bit of code in Python that can make some intelligent predictions.",
+        "Topics": "Machine Learning",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "60 min",
+        "Type": "Course",
+        "Title": "Intermediate Excel",
+        "Description": "Learn how to perform intermediate level functions in Microsoft Excel. In this course, you will learn how to use LOOKUP functions, build and modify pivot tables, use conditional formatting, find and replace data, and check for errors. Learning these tools will help you bring data to life and allow you to use Excel in a more meaningful way.",
+        "Topics": "Data Analysis",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "56 min",
+        "Type": "Course",
+        "Title": "Introduction to Product Design",
+        "Description": "Over the last 10 years, design has proven to be essential to the success of a business. With the rise of the internet and more software being created, and as start-ups and tech companies realize the impact of design on the business and on digital products, there has been an increasing need for design. This course will help you understand and get familiar with product design, the role of design throughout product development and delivery, the different components of product design, and the process of designing digital products and experiences.",
+        "Topics": "Design",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "75 min",
+        "Type": "Course",
+        "Title": "Introduction to Data Visualization with Matplotlib",
+        "Description": "Get started creating charts with the Python library, matplotlib, an industry standard data visualization library. Matplotlib provides a way to easily generate a wide variety of plots and charts in a few lines of Python code. It is an open source project that can be integrated into Python scripts, jupyter notebooks, web application servers, and multiple GUI toolkits. Whether you are exploring sample data available on the internet, or your own business data, learning matplotlib is a great place to start your data visualization journey.",
+        "Topics": "Python",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "111 min",
+        "Type": "Course",
+        "Title": "OWASP Top 10 Vulnerabilities",
+        "Description": "Welcome again to the realm of web security, where millions of dollars and people’s lives are on the line. Not every web application has that much on the line, but many do, and it’s your job as the developer or manager to keep your users safe! From protecting static web sites to the most complex of web services and APIs, every web developer should be aware of, and adept at writing secure code and building systems that can stand up to the strongest of malicious users. In this course, we will build on earlier courses in basic web security by diving into the OWASP Top 10 for Node.js and JavaScript. The OWASP Top 10 is a trusted knowledge framework covering the top 10 major web security vulnerabilities, as well as providing information on how to mitigate them. Throughout this course, we will explore each vulnerability in general and in the scope of how they occur in JavaScript (as the frontend) and Node.js (as the backend).",
+        "Topics": "Security",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "18 min",
+        "Type": "Practice",
+        "Title": "Practice Sinatra Basics",
+        "Description": "Let's practice the basics of creating web apps using Sinatra.",
+        "Topics": "Ruby",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "61 min",
+        "Type": "Practice",
+        "Title": "Practice Ruby on Rails Basics",
+        "Description": "Practice the basics of creating Ruby on Rails applications!",
+        "Topics": "Ruby",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "40 min",
+        "Type": "Course",
+        "Title": "Creating and Modifying Database Tables",
+        "Description": "Learn how to create and modify your own database tables as we work through a real-life example! We'll talk about how to choose the right structure for a database and then see how we can implement that structure.",
+        "Topics": "Databases",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "jQuery Basics",
+        "Description": "jQuery is an immensely popular JavaScript library used to add interactivity to webpages. It's a mature and robust tool that can help you build confidence as a developer by helping you quickly and easily get projects up and running. This course explores the fundamentals of manipulating elements on a webpage and responding to user interactions. We cover what jQuery is, why you'd want to use it, and how to include it in your projects. Throughout the course, you'll use jQuery to enhance several small projects and learn how to add a level of flair and interactivity to any site you work on.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "72 min",
+        "Type": "Course",
+        "Title": "Introduction to Application Security",
+        "Description": "Welcome to the realm of web security, where millions of dollars and people’s lives are on the line. Well, not in all cases, but some! From protecting static web sites to the most complex of web services and APIs, every web developer should be aware of and adept at writing secure code and building systems that can stand up to the strongest of malicious users. In this course, we will lay the groundwork for what you need to know to get started exploring the vast field of web security, and along the way you will begin to realize that security isn’t about checking boxes, but rather about embedding the thought process and principles of rock-solid security into every line of code you write. First, we will discuss why security matters to you as a web developer, then we will look at data security at an implementation level, then finally we will examine the art of maintaining your websites, apps, and services on a daily basis.",
+        "Topics": "Security",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Build a Chatbot with Watson APIs",
+        "Description": "IBM has created an AI platform named Watson that gives businesses and developers access to powerful tools for text and speech analysis, computer vision, and more. Watson APIs consist of a suite of services used to process or analyze data to answer questions and make decisions. This course will show you how to build a chatbot with Node.js and the Conversation and Discovery services from Watson. You'll also learn how to setup your bot on the IBM Cloud platform.",
+        "Topics": "APIs",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "75 min",
+        "Type": "Course",
+        "Title": "Data Analysis Basics",
+        "Description": "Learn how to make better decisions with data in this course on data analysis. We'll start by looking at what data analysis is, and then we'll see how we can use data analysis to create better outcomes.",
+        "Topics": "Data Analysis",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Build a Selfie App",
+        "Description": "In this course we're going to build an app that is quite popular these days - a selfie app! We'll learn how to build and apply filters, how to use Core Data for more than just a single entity and how to use the device's camera to create a fun app!",
+        "Topics": "iOS",
+        "Difficulty": "Advanced"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "72 min",
+        "Type": "Course",
+        "Title": "Introduction to GraphQL",
+        "Description": "Simplify your backend with GraphQL, the new query language and runtime that is taking the world by storm. With GraphQL, it’s no longer necessary to resolve a bunch of different REST endpoints to get a complete chunk of data. We can use GraphQL to tell a server which data we want, and exactly what it should look like. Whether you’re a front-end developer looking to simplify your workflow, or a back-end developer looking for a way to compose more robust APIs, this course is the perfect place to start.",
+        "Topics": "APIs",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "1",
+        "Length": "30 min",
+        "Type": "Practice",
+        "Title": "Practice forEach in JavaScript",
+        "Description": "Now that you've learned about JavaScript's forEach method, practice using it with this series of challenges.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "102 min",
+        "Type": "Course",
+        "Title": "Digital Media Through Photoshop",
+        "Description": "Get started with creating your own digital media files. Setting up your documents properly before you start creating will be crucial for your end product. In this course we’ll learn what those considerations are as well as how to choose the right options. We’ll introduce the most prolific creative application Photoshop to set up our files, make some adjustments and come out the other end with a banner ad suitable for use on the the desktop and mobile as well as print. This course is perfect for anyone looking to get started with design or photography.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "71 min",
+        "Type": "Course",
+        "Title": "Prototyping with Figma",
+        "Description": "In this course, you'll learn how to build interactive and sharable prototypes in Figma, a web-based visual prototyping tool. You'll create a prototype for a prosumer mobile photography app, and by the end, you'll have a better understanding of how to create interactive prototypes that can be shared with project stakeholders and team members.",
+        "Topics": "Design",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "93 min",
+        "Type": "Course",
+        "Title": "Java Arrays",
+        "Description": "Arrays are a container object that allow you store many values of the same type in a single variable",
+        "Topics": "Java",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "100 min",
+        "Type": "Course",
+        "Title": "Active Record Associations in Rails",
+        "Description": "Most of your Rails models are going to be connected to other models in some way. An Author has many Articles, and each Article belongs to an Author. A Doctor has many Patients, and a Patient may have many Doctors as well. Rails uses associations to make it easy to track these relationships in your database.",
+        "Topics": "Ruby",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Build an Image Viewer",
+        "Description": "In this course, we're going to build an image viewer that allows a user to thumb through an album of images, select one and then perform the usual operations like pinching, zooming and so on. In doing so we'll develop and understanding of Scroll Views in iOS and how to implement paging.",
+        "Topics": "iOS",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "49 min",
+        "Type": "Course",
+        "Title": "Getting Started With ES2015",
+        "Description": "ES2015, also called ES6, is a newer version of the JavaScript language that’s well supported in browsers and commonly used by programmers. In this course, you'll get up-to-speed with ES2015 basics and be well on your way to writing modern JavaScript. You'll learn best practices for creating variables, using the let and const keywords, and a better way to concatenate string values using template literals. You'll also learn the compact syntax for creating functions using arrow syntax.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "100 min",
+        "Type": "Course",
+        "Title": "JavaScript Array Iteration Methods",
+        "Description": "Learn how to access and transform data in arrays with JavaScript's array iteration methods. You'll learn how, why and when to use these powerful methods to make your code easier to read and more concise.",
+        "Topics": "JavaScript",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Building Services with ASP.NET Web API",
+        "Description": "Services expose data and processes through APIs (Application Programming Interfaces) implemented using common approaches or standards. Decoupling our back-end from our front-end makes it possible for our services to support multiple client apps. We can even allow other developers and organizations to consume and use our services to further broaden the reach of our applications. In this course, you'll learn how to use the ASP.NET Web API framework to build a RESTful service or HTTP API. As you learn about Web API, you'll create a service for the Fitness Frog single-page web app (SPA) developed using Angular.",
+        "Topics": "C#",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "4",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Bootstrap 4 Basics",
+        "Description": "Learn to use the latest in Bootstrap 4, one of the most popular open source front end frameworks, to help you build a functional design and layout in little time.",
+        "Topics": "CSS",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Ruby Basics",
+        "Description": "Ruby is a programming language with a focus on simplicity and productivity. It has an elegant syntax that is natural to read and easy to write. In Ruby Basics, we'll learn how to work with Ruby and write simple Ruby programs.",
+        "Topics": "Ruby",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "3 hours",
+        "Type": "Course",
+        "Title": "Build a Simple Android App with Kotlin",
+        "Description": "This course covers the very basics of Android development. We will build a simple app that will serve up some fun facts when you tap on a button. We introduce you to programming in Android, a tool for Android development called Android Studio, and some very basic concepts of the Android Software Development Kit, or SDK. By the end you will have a good idea of how a basic app works, and you will be armed with the knowledge to start building more.",
+        "Topics": "Android",
+        "Difficulty": "Beginner"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "111 min",
+        "Type": "Course",
+        "Title": "CSS Grid Layout",
+        "Description": "CSS Grid Layout provides a built-in, more efficient way of designing grid-based layouts in the browser. It brings a new set of properties, functions and flexible units that let you control the exact placement and sizing of grid components.",
+        "Topics": "CSS",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "110 min",
+        "Type": "Course",
+        "Title": "Introduction to Xamarin",
+        "Description": "An introduction to developing mobile apps using the Xamarin platform. You'll learn what the Xamarin platform is and how it works. You'll setup a development environment that will allow you to build Android and iOS apps. You'll also learn techniques to share code across mobile platforms. Complete this course and you'll have a functioning app on Android and iOS using the Xamarin platform.",
+        "Topics": "C#",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "5",
+        "Length": "103 min",
+        "Type": "Course",
+        "Title": "Introduction to Docker",
+        "Description": "Docker allows any developer of any language to package an app into a container, like a shipping container. Containers include an app and all the other software it depends on, like databases. Containers let your users easily run your website, app, or service on any operating system they want. This course will show you how Docker works, and how it can make it easier to distribute your software!",
+        "Topics": "Dev Tools",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Introduction to Selenium",
+        "Description": "As web applications grow in size it becomes difficult to reliably and thoroughly verify that the application behaves as intended. Manually stepping through the system gets tedious and time consuming. That's where automated testing tools become invaluable. In this course we will learn to use Selenium WebDriver, one of the most popular utilities for automating interactions with web browsers, to build automated tests for the purpose of verifying and maintaining a quality application.",
+        "Topics": "Quality Assurance",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "113 min",
+        "Type": "Course",
+        "Title": "React by Example",
+        "Description": "Learn React programming patterns by building an application for keeping track of RSVP's! We'll start at the beginning, using create react app (https://github.com/facebookincubator/create-react-app) to initialize the project, and by the end you'll have a functional application.",
+        "Topics": "JavaScript",
+        "Difficulty": "Intermediate"
+    },
+
+    {
+        "Parts": "3",
+        "Length": "2 hours",
+        "Type": "Course",
+        "Title": "Designing Interfaces in PHP",
+        "Description": "An interface is a type of contract that assures that certain abilities are available on on a particular object class. We'll write and extend multiple interfaces, then implement them to design and match functionality. Interfaces do not store any implementation details themselves. To share implementation details between classes, we harness the power of inheritance. Abstract classes prevent a parent class from being directly instantiated, while at the same time defining methods that MUST be implemented in any extending children. This course will combine interface contracts with class hierarchy to leverage the benefits of each concept. We'll explain the differences between interfaces and abstract classes, and give you the knowledge you need to build and implement both in your own projects.",
+        "Topics": "PHP",
+        "Difficulty": "Intermediate"
+    }
+]
