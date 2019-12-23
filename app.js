@@ -44,9 +44,9 @@ const profileRouter = require("./routes/profile.js");
 const aboutRouter = require("./routes/about.js");
 
 // Use these routes
-app.use("/", indexRouter);
 app.use("/profile", profileRouter);
 app.use("/about", aboutRouter);
+app.use("/", indexRouter);
 
 // catch 404 and forward to error handler from http-errors
 app.use(function(req, res, next) {

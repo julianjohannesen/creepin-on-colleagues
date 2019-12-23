@@ -6,14 +6,15 @@ block content
         - var pointsFormatted = Number(points).toLocaleString()
         p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
         p Points breakdown:
-        ul.points
+        ul#points
             each point, index in profile.points
                 - var pointFormatted = Number(point).toLocaleString()
                 if point > 0
                     if index != "total"
-                        li= index + ": " + pointFormatted
+                        li(data-points=`${point}`)= index + ": " + pointFormatted
         p Badges include:
         ul.badges
             each badge in profile.badges
                 li= badge.name
+        script(src="./javascripts/scripts.js")
 
