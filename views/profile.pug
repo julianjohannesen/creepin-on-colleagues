@@ -2,19 +2,38 @@ extends layout
 
 block content
     div.profile
+        //- VARIABLES ------------------------------------------------------
         - var points = profile.points.total
         - var pointsFormatted = Number(points).toLocaleString()
-        p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
-        p Points breakdown:
-        ul#points
-            each point, index in profile.points
-                - var pointFormatted = Number(point).toLocaleString()
-                if point > 0
-                    if index != "total"
-                        li(data-points=`${point}`)= index + ": " + pointFormatted
-        p Badges include:
-        ul.badges
-            each badge in profile.badges
-                li= badge.name
-        script(src="./javascripts/scripts.js")
-
+        - var badges = profile.badges
+        //- SUMMARY SECTION --------------------------------------------
+        section(class="summary")
+            p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
+        //- POINTS SECTION -----------------------------------------------
+        section(class="points")
+            h3 Points Breakdown
+            ul#points
+                each point, index in profile.points
+                    - var pointFormatted = Number(point).toLocaleString()
+                    if point > 0
+                        if index != "total"
+                            li(data-points=`${point}`)= index + ": " + pointFormatted
+        //- BADGES SECTION -----------------------------------------------
+        section(class="badges")
+            h3 Badges
+            ul#badges
+                each badge in profile.badges
+                    li= badge.name
+        //- COURSES SECTION -----------------------------------------------
+        section(class="courses")
+            h3 Completed Courses
+            ul#courses
+                each badge in badges
+                    if badge.courses.length > 0
+                        each course in badge.courses
+                            - var title = course.title
+                            - var titleId = title.toLowerCase().split(' ').join('-').replace(/:/, '')
+                            li(id=`${titleId}`)
+                                a(href=`${course.url}` title=`${title}`)=title
+    //- SCRIPTS ------------------------------------------------------------------
+    script(src="./javascripts/scripts.js")
