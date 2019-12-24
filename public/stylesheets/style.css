@@ -73,7 +73,7 @@ body {
     margin: 1vw;
   }
 
-  .badges {
+  #badges {
     columns: 3;
     column-gap: 1vw;
   }
