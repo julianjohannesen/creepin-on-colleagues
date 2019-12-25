@@ -1,4 +1,24 @@
-# What to scrape
+# Enhancing profile data with course data
+
+## What can be enhanced?
+
+1. Sort and filter badges by 
+  -- When acquired
+  -- Topic
+  -- Difficulty
+  -- Degree Track
+
+2. Sort and filter courses
+  -- Alphabetical by title
+  -- When completed
+  -- Topic
+  -- Difficulty
+  -- Degree Track
+  -- Instructor
+  -- Course age
+  -- Estimated length
+
+3. Search through badges and courses by title
 
 ## From the Library Page, Search All Whatever
 
@@ -9,7 +29,7 @@ https://teamtreehouse.com/library/type:bonus
 
 By default everything is in order from newest to oldest.
 
-Here's the card html for the cards on those pages:
+Here's the card html for the cards on the courses page. It may differ from type to type.
 
 ```html
 <li class="card course syllabus topic-front-end" data-location="library" data-activity="syllabus/4846" id="Syllabus-4846">
@@ -67,7 +87,7 @@ See the course page example.
 
 ## How do you do this?
 
-1. Request the page
-2. Once you have the html, turn it into an object
-3. Grab all the stuff I want
+1. Manually copy page html for the 4 pages
+2. Manually turn that html into a js object. (The first time I did this by copying the text of the displayed html page from my browser. I then pasted it into a .md doc and did a bunch of regex stuff. It took a long time. And I didn't record all of the steps and regex I used. Bummer.)
+3. Grab all the stuff I want and add it where? 
 
