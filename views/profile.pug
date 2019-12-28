@@ -10,6 +10,7 @@ block content
         section(class="summary")
             p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
         //- POINTS SECTION -----------------------------------------------
+        //- profile.points is an object with course topics as keys and point values as values. So, each 'point' is a key-value pair. When we use 'each item, index in someObject' to iterate over an object, 'item' is the value and 'index' is actually the key. 
         section(class="points")
             h3 Points Breakdown
             ul#points
@@ -17,7 +18,8 @@ block content
                     - var pointFormatted = Number(point).toLocaleString()
                     if point > 0
                         if index != "total"
-                            li(data-points=`${point}`)= index + ": " + pointFormatted
+                            - var topic = index.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase();
+                            li(id=`topic${topic}` data-points=`${point}`)= index + ": " + pointFormatted
         //- BADGES SECTION -----------------------------------------------
         section(class="badges")
             h3 Badges
@@ -27,12 +29,12 @@ block content
         //- COURSES SECTION -----------------------------------------------
         section(class="courses")
             h3 Completed Courses
-            ul#courses
+            ol#courses
                 each badge in badges
                     if badge.courses.length > 0
                         each course in badge.courses
                             - var title = course.title
-                            - var titleId = title.toLowerCase().split(' ').join('-').replace(/:/, '')
+                            - var titleId = title.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase()
                             li(id=`${titleId}`)
                                 a(href=`${course.url}` title=`${title}`)=title
     //- SCRIPTS ------------------------------------------------------------------
