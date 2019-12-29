@@ -32,10 +32,9 @@ block content
             ol#courses
                 each badge in badges
                     if badge.courses.length > 0
-                        each course in badge.courses
-                            - var title = course.title
-                            - var titleId = title.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase()
-                            li(id=`${titleId}`)
-                                a(href=`${course.url}` title=`${title}`)=title
+                        - var title = badge.courses[0].title
+                        - var titleId = title.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase()
+                        li(id=`${titleId}`)
+                            a(href=`${badge.courses[0].url}` title=`${title}`)=title
     //- SCRIPTS ------------------------------------------------------------------
     script(src="./javascripts/scripts.js")

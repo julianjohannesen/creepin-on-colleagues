@@ -15,51 +15,55 @@ function sortThenRemoveDuplicates(parentUl){
     // Else if we're dealing with courses
     } else {
 
-    // getUniqueCourses takes a course node and returns it, only if the course node's id can be found in the array unique course IDs returned by getUniqueCourseIds(). 
-    //!NOTE: This might seem like a round about way to return an array of unique nodes based on each node's id, but I can't think of any other way.
-    function getUniqueCourses(courseNode){
+        // getUniqueCourses returns an array of unique course nodes, sorted. 
+        function getUniqueCourses(){
 
-        // Map over the course nodes to get their IDs, and then filter to return only unique course IDs
-        const uniqueCourseIds = getUniqueCourseIds();
-        
-        // Loop over the courses and for each course id return only the first courseNode in courseNodes that has that id
-        //!NOTE: Do this with reduce
-        //!NOTE: bundle this bit up in a getUniqueCourseNodes function just like I did for getUniqueCourseIds
-        const uniqueCourseNodes = [];
-        courseNodes.forEach(getCourseNode);
-        
-        console.log(uniqueCourseNodes); // doesn't work
-        
-        // Get an array of unique course ids
-        function getUniqueCourseIds(){
+            // Loop over the unique course ids and find the course node associated with that id. Push the node to a new array of sorted, unique course nodes
+            const uniqueCourseIds = getUniqueCourseIds();
+            console.log(uniqueCourseIds)
+            const uniqueCourseNodes = [];
+            uniqueCourseIds.forEach(getCourseNode);
+                    
+            // Map over the course nodes to get their IDs, and then filter to return only unique course IDs
+            function getUniqueCourseIds(){
 
-            const theIds = courseNodes.map(getCourseId);
-            const theUniqueIds = theIds.filter(isCourseUnique);
-            
-            // getCourseName takes a course node and returns its id.
-            function getCourseId(courseNode){ 
-                return courseNode.id;
+                const theIds = courseNodes.map(getCourseId).sort();
+                const theUniqueIds = theIds.filter(isCourseUnique);
+                
+                // getCourseName takes a course node and returns its id.
+                function getCourseId(courseNode){ 
+                    return courseNode.id;
+                }
+
+                // isCourseUnique takes a course id and index and returns a boolean telling us whether the index of that course in theIds is the same as the current index in the loop. The effect is to filter for unique course names.
+                function isCourseUnique(courseId,index){ 
+                    return theIds.indexOf(courseId) === index; 
+                }
+
+                // ["One", "One", "Two", "TwoOne", "Oneone"]
+                //   courseId "One" | loop index 0 | indexOf "One" === 0 | 0=0 YES
+                //   courseId "One" | loop index 1 | indexOf "One" === 0 | 1!=0 NO
+                //   courseId "Two" | loop index 2 | indexOf "Two" === 2 | 2=2 YES
+                //   courseId "Twoone" | loop index 3 | indexOf "TwoOne" === 3 | 3=3 YES
+
+                console.log(theUniqueIds);
+                return theUniqueIds;
             }
 
-            // isCourseUnique takes a course id and index and returns a boolean telling us whether the index of that course in theIds is the same as the current index in the loop. The effect is to filter for unique course names.
-            function isCourseUnique(courseId,index){ 
-                return theIds.indexOf(courseId) === index; 
+            // 
+            function getCourseNode(courseId){
+                courseNodes.forEach( courseNode => {
+                    if(courseId === courseNode.id) uniqueCourseNodes.push(courseNode);
+                });
             }
 
-            return theUniqueIds;
+            return uniqueCourseNodes;
         }
 
-        // 
-        function getCourseNode(courseNode, index){
-            if(courseNode.id === uniqueCourseIds[index]) uniqueCourseNodes.push(courseNode);
-        }
-
-
-    }
-
-    courseNodes
-        .map(getUniqueCourses)
-        .forEach( li => parentUl.append(li) );
+        const uniqueCourses = getUniqueCourses();
+        const frag = document.createDocumentFragment();
+        uniqueCourses.forEach( li => frag.append(li) );
+        parentUl.append(frag);
     }
 }
 
