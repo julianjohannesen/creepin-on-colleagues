@@ -19,29 +19,39 @@ function sortThenRemoveDuplicates(parentUl){
     //!NOTE: This might seem like a round about way to return an array of unique nodes based on each node's id, but I can't think of any other way.
     function getUniqueCourses(courseNode){
 
-        // Loop over the course ids and for each course id return only the first courseNode in courseNodes that has that id
-        getUniqueCourseIds().forEach(getCourseNode);
+        // Map over the course nodes to get their IDs, and then filter to return only unique course IDs
+        const uniqueCourseIds = getUniqueCourseIds();
+        
+        // Loop over the courses and for each course id return only the first courseNode in courseNodes that has that id
+        //!NOTE: Do this with reduce
+        //!NOTE: bundle this bit up in a getUniqueCourseNodes function just like I did for getUniqueCourseIds
+        const uniqueCourseNodes = [];
+        courseNodes.forEach(getCourseNode);
+        
+        console.log(uniqueCourseNodes); // doesn't work
         
         // Get an array of unique course ids
         function getUniqueCourseIds(){
-            return courseNodes
-                .map(getCourseId)
-                .sort()
-                .filter(isCourseUnique);
 
+            const theIds = courseNodes.map(getCourseId);
+            const theUniqueIds = theIds.filter(isCourseUnique);
+            
             // getCourseName takes a course node and returns its id.
             function getCourseId(courseNode){ 
                 return courseNode.id;
             }
 
-            // isCourseUnique takes a course id and index and returns a boolean telling us whether the index of that course in the array of course ids returned by courseNodes.map(getCourseId) is the same as the current index in that same array. The effect is to filter for unique course names.
-            function isCourseUnique(id,index){ 
-                return courseNodes.indexOf(id) === index; 
+            // isCourseUnique takes a course id and index and returns a boolean telling us whether the index of that course in theIds is the same as the current index in the loop. The effect is to filter for unique course names.
+            function isCourseUnique(courseId,index){ 
+                return theIds.indexOf(courseId) === index; 
             }
+
+            return theUniqueIds;
         }
 
-        function getCourseNode(courseId){
-            if(courseId === courseNode.id) return courseNode;
+        // 
+        function getCourseNode(courseNode, index){
+            if(courseNode.id === uniqueCourseIds[index]) uniqueCourseNodes.push(courseNode);
         }
 
 
@@ -55,8 +65,8 @@ function sortThenRemoveDuplicates(parentUl){
 
 // EVENT HANDLERS ------------------------------------------
 
-function pointsHandler(){ reorder(pointsUl) }
-function coursesHandler(){ reorder(coursesUl) }
+function pointsHandler(){ sortThenRemoveDuplicates(pointsUl) }
+function coursesHandler(){ sortThenRemoveDuplicates(coursesUl) }
 function DCLHandlers(){
     pointsHandler();
     coursesHandler();
