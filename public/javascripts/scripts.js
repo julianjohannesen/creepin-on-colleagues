@@ -20,7 +20,6 @@ function sortThenRemoveDuplicates(parentUl){
 
             // Loop over the unique course ids and find the course node associated with that id. Push the node to a new array of sorted, unique course nodes
             const uniqueCourseIds = getUniqueCourseIds();
-            console.log(uniqueCourseIds)
             const uniqueCourseNodes = [];
             uniqueCourseIds.forEach(getCourseNode);
                     
@@ -40,30 +39,28 @@ function sortThenRemoveDuplicates(parentUl){
                     return theIds.indexOf(courseId) === index; 
                 }
 
-                // ["One", "One", "Two", "TwoOne", "Oneone"]
-                //   courseId "One" | loop index 0 | indexOf "One" === 0 | 0=0 YES
-                //   courseId "One" | loop index 1 | indexOf "One" === 0 | 1!=0 NO
-                //   courseId "Two" | loop index 2 | indexOf "Two" === 2 | 2=2 YES
-                //   courseId "Twoone" | loop index 3 | indexOf "TwoOne" === 3 | 3=3 YES
-
-                console.log(theUniqueIds);
                 return theUniqueIds;
             }
 
-            // 
             function getCourseNode(courseId){
-                courseNodes.forEach( courseNode => {
-                    if(courseId === courseNode.id) uniqueCourseNodes.push(courseNode);
-                });
+                for(let i=0; i<courseNodes.length; i++){
+                    if(courseId === courseNodes[i].id){
+                        uniqueCourseNodes.push(courseNodes[i]);
+                        break;
+                    }
+                    
+                }
             }
 
             return uniqueCourseNodes;
         }
 
         const uniqueCourses = getUniqueCourses();
-        const frag = document.createDocumentFragment();
-        uniqueCourses.forEach( li => frag.append(li) );
-        parentUl.append(frag);
+        console.log(uniqueCourses);
+        const fragment = new DocumentFragment();
+        fragment.append(...uniqueCourses);
+        parentUl.innerHTML = ' ';
+        parentUl.append(fragment);
     }
 }
 
