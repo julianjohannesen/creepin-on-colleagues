@@ -19,7 +19,9 @@ block content
                     if point > 0
                         if index != "total"
                             - var topic = index.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase();
-                            li(id=`topic${topic}` data-points=`${point}`)= index + ": " + pointFormatted
+                            li(id=`topic${topic}` data-points=`${point}`)
+                                span(class="topic")= index
+                                span(class="score")= pointFormatted
         //- BADGES SECTION -----------------------------------------------
         section(class="badges")
             h3 Badges
