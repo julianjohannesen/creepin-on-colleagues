@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const bodyParser = require("body-parser");
-const { asyncHandler, validate, getProfile }= require("../helpers.js");
+const { asyncHandler, validate, getProfile } = require("../helpers.js");
 
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({"extended":"true"}));

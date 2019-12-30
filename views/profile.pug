@@ -22,21 +22,34 @@ block content
                             li(id=`topic${topic}` data-points=`${point}`)
                                 span(class="topic")= index
                                 span(class="score")= pointFormatted
+        //- COURSES SECTION -----------------------------------------------
+        section(class="courses")
+            h3 Completed Courses
+            section(class="courses summary")
+                #topic-summary
+                    h4 Topic Summary
+                    ul
+                        each topic in ??????
+                            li= topic.title + " " + topic.courses
+                #difficulty-summary
+                    h4 Difficulty Summary
+                    ul
+                        each difficulty in ?????
+                            li= difficulty.title + " " + difficulty.courses
+            section(class="courses list")
+                h4 Completed Course List
+                ul#courses
+                    each badge in badges
+                        if badge.courses.length > 0
+                            - var title = badge.courses[0].title
+                            - var titleId = title.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase()
+                            li(id=`${titleId}`)
+                                a(href=`${badge.courses[0].url}` title=`${title}`)=title
         //- BADGES SECTION -----------------------------------------------
         section(class="badges")
             h3 Badges
             ul#badges
                 each badge in profile.badges
                     li= badge.name
-        //- COURSES SECTION -----------------------------------------------
-        section(class="courses")
-            h3 Completed Courses
-            ol#courses
-                each badge in badges
-                    if badge.courses.length > 0
-                        - var title = badge.courses[0].title
-                        - var titleId = title.replace(/\:|\?|\$|\_|\,|\.|\'|\s/gi, '').toLowerCase()
-                        li(id=`${titleId}`)
-                            a(href=`${badge.courses[0].url}` title=`${title}`)=title
     //- SCRIPTS ------------------------------------------------------------------
     script(src="./javascripts/scripts.js")

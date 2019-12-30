@@ -1,15 +1,13 @@
 
-## PROBLEM: Courses appear multiple times
+## PROBLEM: Show topic summary with number of courses completed in that topic
 ## QUESTIONS: 
-1. Why doesn't the deduping algo catch these courses?
+1. How do I know which topics to show?
+2. How do I get the total number of courses completed in that topic?
 
 ## Background
-Each badge has a list of courses that were completed in order to earn the badge. The courses appear in order of course, then course part. For example, the badges for "Sorting Algorithms" and "Searching Names" have these courses associated with them:
-- Algorithms: Sorting and Searching
-- Sorting Algorithms
-- Algorithms: Sorting and Searching
-- Searching Names
+Each badge has a list of courses that were completed in order to earn the badge. But the courses only show title and url. I want topic and difficulty, and anything else I can scrounge up. 
 
-Every course has a url. Some of the urls are two or more subdomains deep, e.g. course/course-part
+Given the course title, I should be able to cross reference that with a complete list of courses that I created in json format. (That process took forever, but was a really good exercise in using regex!)
 
-I want to group courses with their 
+I'd like to do all of that work on the server side and include it in the profile data.
+

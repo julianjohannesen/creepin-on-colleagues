@@ -75,7 +75,7 @@ body {
     padding: 2vw;
   }
 
-  ul, ol {
+  ul {
     display: flex;
     flex-wrap: wrap;
     max-width: 90vw;
