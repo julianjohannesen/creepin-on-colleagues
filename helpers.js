@@ -1,10 +1,12 @@
+//!NOTE: request module has a promise version and I could probably use that here. There's also probably an async/await way to do this
+//!NOTE: The error handling in the promise.reject method is not working
+//!NOTE: I need to refactor the validate function to be more flexible, e.g. take any number of string parameters and validate each
+
 const { body, validationResult } = require("express-validator");
 const request = require("request");
 const { courses } = require("./courses.json");
 
-
 // asyncHandler returns an asynchronous callback (a route handler) wrapped in a try catch block
-//!NOTE: The error handling is not working here
 function asyncHandler(cb){
 	return async (req,res,next) => {
 		try{
@@ -16,7 +18,6 @@ function asyncHandler(cb){
 }
 
 // Validate will validate the submitted form field using express-validate module The parameter is an array of validations. As it appears in the index.js route, there's only one: body("username"). The validation methods are then chained to the returned result.
-//!NOTE: I need to refactor this to be more flexible, e.g. take any number of string parameters and validate each
 function validate(string){
 	return async (req, res, next) => {
         const validations = [
@@ -29,26 +30,21 @@ function validate(string){
 	};
 }  
 
-// getProfile will return a promise to fetch a string containing json data from the supplied url using the request module. On error the promise is rejected, on success, the string is parsed to json, and the promise resolves with the fetched data
-function getProfile(url){
-	//!NOTE: request module has a promise version and I could probably use that here. There's also probably an async/await way to do this
+// getPage will return a promise to fetch a string containing json data from the supplied url using the request module. On error the promise is rejected, on success, the string is parsed to json, and the promise resolves with the fetched data.
+function getPage(url){
+
+	// Return a promise
 	return new Promise( (resolve,reject) => {
-		// Fetch profile with request module
-		request(
-			// The endpoint
-			url,
-			// The request module callback
-			(err, res, body) => {
-				if(err){
-                    //!NOTE: this is failing.
-					reject(err);
-				} else {
-					//!NOTE: Do I need to double check that the response statusCode was 200?
-					const profile = JSON.parse(body);
-					resolve(profile);
-				}
-			}
-		)
+
+		// Fetch the page with request module
+		request(url, callback);
+
+		// The request module callback
+		function callback(err, res, body){
+			// Handle reject and resolve cases
+			if(err){ reject(err) } // this is failing.	
+			else{ resolve(JSON.parse(body)) }
+		}
 	});
 }
 
@@ -91,15 +87,4 @@ function processProfile(profile){
 
 }
 
-function getPracticesPage(req, res, next){
-
-	request("https://teamtreehouse.com/library/type:practice", callback);
-
-	function callback(req,res,body){
-
-	}
-	
-	next();
-}
-
-module.exports = {asyncHandler, validate, getProfile, processProfile};
+module.exports = {asyncHandler, validate, getPage, processProfile};

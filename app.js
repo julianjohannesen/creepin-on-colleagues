@@ -1,19 +1,12 @@
-// Node.js path object
 const path = require("path");
-// Express library
 const express = require("express");
-// Serve favicon using webmanifest middlewear
 const favicon = require("serve-favicon");
-// Logging middlewear
 const logger = require("morgan");
-// Make response.body ready for use middlewear
 const bodyParser = require("body-parser");
-// Parse cookies middlewear
 const cookieParser = require("cookie-parser");
-// Parse multi part form data middlewear
 const multer = require("multer");
-// Handle errors middlewear
 const createError = require("http-errors");
+const { asyncHandler, getPage } = require("./helpers.js");
 
 // Initialize multer and express
 const upload = multer();
@@ -38,7 +31,13 @@ app.use(upload.array());
 // Server static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use(getPracticesPage())
+// Create a write stream into which to write the processed practices page data
+let practicesData;
+//!NOTE: this is fetching unprocessed html. my getPage isn't set up for that, so i'll need to do some editing
+// app.use(asyncHandler( async (req,res,next) => {
+// 	practicesData = getPage("https://teamtreehouse.com/library/type:practice");
+// 	next();
+// } ));
 
 // Require these routes
 const indexRouter = require("./routes/index.js");

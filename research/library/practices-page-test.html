@@ -4515,48 +4515,52 @@
             </li>
         </ul>
 
-        <script type="text/javascript">
-            const cardList = [...document.querySelectorAll('.card-list li.card')];
+    <script type="text/javascript">
+    
+    const cardList = [...document.querySelectorAll('.card-list li.card')];
+    
+    function buildObjectArray(listArray){
 
-            // Stuff I want
-            // li.id - The unique ID of the item
-            // li a.href - the item's URL in the Treehouse library
-            // li a div span.textContent - The item's estimated completion time
-            // li a strong.className - The item type, e.g. course, practice, workshop
-            // li a h3.textContent - The item title
-            // li a p.textContent - The item description
-            // li ul li(class="topic-whatever topic topic") a span.textContent - The item's topic
-            // li ul li(class="difficulty") span.textContent - Item's difficulty level 
+        const coursesArr = listArray.reduce( (acc,card,ind)=>{
 
-            const coursesArr = cardList.reduce( (acc,card,ind)=>{
-                // console.log("The time estimate: ", card.querySelector(".poop").textContent);
+            const id = card.id || "noid";
+            const url = card.querySelector("a.card-box").href || "#";
+            const timeEst = card.querySelector(".card-estimate") && card.querySelector(".card-estimate").textContent.trim() || "No estimate available";
+            const type = card.querySelector(".card-type") && card.querySelector(".card-type").textContent.trim() || "No type available"; 
+            const title = card.querySelector(".card-title") && card.querySelector(".card-title").textContent.trim() || "No title available";
+            const description = card.querySelector(".card-description") && card.querySelector(".card-description").textContent.trim() || "No description available";
+            const topic = card.querySelector(".topic") && card.querySelector(".topic").textContent.trim() || "No topic available";
+            const difficulty = card.querySelector(".difficulty") && card.querySelector(".difficulty").textContent.trim() || "Difficulty not available";
 
-                const id = card.id || "noid";
-                const url = card.firstChild.href || "#";
-                const timeEst = card.querySelector(".card-estimate") && card.querySelector(".card-estimate").textContent || "No estimate available";
-                const type = card.querySelector(".card-type") && card.querySelector(".card-type").textContent || "No type available"; 
-                const title = card.querySelector(".card-title") && card.querySelector(".card-title").textContent || "No title available";
-                const description = card.querySelector(".card-description") && card.querySelector(".card-description").textContent || "No description available";
-                const topic = card.querySelector(".topic") && card.querySelector(".topic").textContent || "No topic available";
-                const difficulty = card.querySelector(".difficulty") && card.querySelector(".difficulty").textContent || "Difficulty not available";
+            const cardToJson = {
+                "id": id,
+                "url": url,
+                "timeEst": timeEst,
+                "type": type,
+                "title": title,
+                "description": description,
+                "topic": topic,
+                "difficulty": difficulty
+            }
+            acc.push(cardToJson);
+            return acc
+        } , []);
 
-                const cardToJson = {
-                    "id": id,
-                    "url": url,
-                    "timeEst": timeEst,
-                    "type": type,
-                    "title": title,
-                    "description": description,
-                    "topic": topic,
-                    "difficulty": difficulty
-                }
-                acc.push(cardToJson);
-                return acc
-            } , []);
+        let coursesSorted = coursesArr.sort((a,b) => a.title > b.title ? 1 : -1);
 
-            document.body.innerHTML = coursesArr;
+        return coursesSorted
 
-            console.log(coursesArr);
-        </script>
+    }
+
+
+    const coursesString = buildObjectArray(cardList).reduce( (acc,course) => {
+        acc += '<p>' + course.title + '</p>'
+        return acc;
+    },' ')
+
+    document.body.innerHTML = "<div>"+ coursesString +"</div>";
+
+    console.log(coursesString);
+    </script>
     </body>
 </html>
