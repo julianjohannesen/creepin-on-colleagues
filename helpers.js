@@ -1,6 +1,6 @@
-const express = require("express");
-const { check, body, validationResult } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 const request = require("request");
+const { courses } = require("./courses.json");
 
 
 // asyncHandler returns an asynchronous callback (a route handler) wrapped in a try catch block
@@ -31,6 +31,7 @@ function validate(string){
 
 // getProfile will return a promise to fetch a string containing json data from the supplied url using the request module. On error the promise is rejected, on success, the string is parsed to json, and the promise resolves with the fetched data
 function getProfile(url){
+	//!NOTE: request module has a promise version and I could probably use that here. There's also probably an async/await way to do this
 	return new Promise( (resolve,reject) => {
 		// Fetch profile with request module
 		request(
@@ -51,4 +52,54 @@ function getProfile(url){
 	});
 }
 
-module.exports = {asyncHandler, validate, getProfile};
+function processProfile(profile){
+
+	// "Badges" is an array of course objects. Using reduce(), for each "badge", we'll push that badge's courses to a parentCourse array or to the accumulator, which we'll store in childCourses.
+	let parentCourses = [];
+
+	let childCourses = profile.badges
+		.reduce((acc, currentBadge, ind) => {
+			// Test whether the first course in cur have already been added to the accumulator. The badge courses array lists the parent course first, before listing child courses.
+			if (currentBadge.courses.length > 0) {
+				// If the parentCourses array does NOT already include a course title
+				if (!parentCourses.includes(currentBadge.courses[0].title)) {
+					// then push the new parent course title to the parentCourses array
+					parentCourses.push(currentBadge.courses[0].title.trim());
+				}
+				// And push the child course to the childCourses array
+				acc.push(currentBadge.courses[1].title.trim());
+			}
+			return acc;
+	}, [])
+		.sort();
+
+	// Remove those last two pesky duplicates from parentCourses and then sort the array.
+	parentCourses = parentCourses.filter( (dupe,index) => parentCourses.indexOf(dupe) === index).sort();
+
+	const completedCourses = parentCourses.reduce( (acc, currentTitle, ind) => {
+		courses.forEach( course => {
+			if(currentTitle === course.Title){
+				acc.push(course);
+			}
+		});
+		return acc;
+	}, []);
+
+	profile.completedCourses = completedCourses;
+	// This is just an array of course titles right now
+	profile.childCourses = childCourses
+
+}
+
+function getPracticesPage(req, res, next){
+
+	request("https://teamtreehouse.com/library/type:practice", callback);
+
+	function callback(req,res,body){
+
+	}
+	
+	next();
+}
+
+module.exports = {asyncHandler, validate, getProfile, processProfile};

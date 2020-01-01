@@ -38,6 +38,8 @@ app.use(upload.array());
 // Server static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
 
+app.use(getPracticesPage())
+
 // Require these routes
 const indexRouter = require("./routes/index.js");
 const profileRouter = require("./routes/profile.js");

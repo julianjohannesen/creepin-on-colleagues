@@ -8,7 +8,7 @@ block content
         - var badges = profile.badges
         //- SUMMARY SECTION --------------------------------------------
         section(class="summary")
-            p(class="summary")= `${profile.name} has ${pointsFormatted} total points and ${profile.badges.length} badges.`
+            p(class="summary")= `${profile.name} has completed ${profile.completedCourses.length} courses, earning ${pointsFormatted} total points and ${profile.badges.length} badges.`
         //- POINTS SECTION -----------------------------------------------
         //- profile.points is an object with course topics as keys and point values as values. So, each 'point' is a key-value pair. When we use 'each item, index in someObject' to iterate over an object, 'item' is the value and 'index' is actually the key. 
         section(class="points")
@@ -29,12 +29,12 @@ block content
                 #topic-summary
                     h4 Topic Summary
                     ul
-                        each topic in ??????
+                        //-each topic in ??????
                             li= topic.title + " " + topic.courses
                 #difficulty-summary
                     h4 Difficulty Summary
                     ul
-                        each difficulty in ?????
+                        //-each difficulty in ?????
                             li= difficulty.title + " " + difficulty.courses
             section(class="courses list")
                 h4 Completed Course List

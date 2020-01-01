@@ -11,3 +11,9 @@ Given the course title, I should be able to cross reference that with a complete
 
 I'd like to do all of that work on the server side and include it in the profile data.
 
+One problem is that I do my deduping and initial sorting on the client side. Maybe I need to move that to the server side and do that first, before cross referencing with my json and sending everything to the client.
+
+That would mean creating a new processing middleware between getting my profile data and rendering the profile view.
+
+
+
