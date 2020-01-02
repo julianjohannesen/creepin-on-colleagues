@@ -19566,7 +19566,7 @@
             }
 
             const coursesString = buildObjectArray(cardList).reduce((acc, course) => {
-                acc += '<p>' + course.title + '</p>';
+                acc += '<p>' + course.title + '</p>'  + JSON.stringify(course, null, 2);
                 return acc;
             }, ' ');
 

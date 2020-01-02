@@ -6,7 +6,6 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const createError = require("http-errors");
-const { asyncHandler, getPage } = require("./helpers.js");
 
 // Initialize multer and express
 const upload = multer();
@@ -30,14 +29,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(upload.array());
 // Server static files from the public directory
 app.use(express.static(path.join(__dirname, "public")));
-
-// Create a write stream into which to write the processed practices page data
-let practicesData;
-//!NOTE: this is fetching unprocessed html. my getPage isn't set up for that, so i'll need to do some editing
-// app.use(asyncHandler( async (req,res,next) => {
-// 	practicesData = getPage("https://teamtreehouse.com/library/type:practice");
-// 	next();
-// } ));
 
 // Require these routes
 const indexRouter = require("./routes/index.js");

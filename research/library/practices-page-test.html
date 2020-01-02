@@ -4552,15 +4552,15 @@
 
     }
 
-
-    const coursesString = buildObjectArray(cardList).reduce( (acc,course) => {
-        acc += '<p>' + course.title + '</p>'
+    const practicesArray = buildObjectArray(cardList);
+    const coursesString = practicesArray.reduce( (acc,course) => {
+        acc += '<p>' + course.title + '</p>'  + JSON.stringify(course, null, 2);
         return acc;
     },' ')
 
     document.body.innerHTML = "<div>"+ coursesString +"</div>";
 
-    console.log(coursesString);
+    console.log(practicesArray, coursesString);
     </script>
     </body>
 </html>
