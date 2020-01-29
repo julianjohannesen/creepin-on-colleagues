@@ -1,5 +1,7 @@
 # Creepin' on Colleagues
 
+Deployed here: http://creepin-on-colleagues.herokuapp.com/
+
 ## What is this?
 
 Creepin' on Colleagues is a toy app that allows Treehouse students to "creep" on each other's progress though the Treehouse curriculum. 
