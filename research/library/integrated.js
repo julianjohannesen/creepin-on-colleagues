@@ -6,7 +6,7 @@
 
 var fs = require('fs');
 
-fs.readFile('./courses.html', (err, data) => {
+fs.readFile('courses.html', (err, data) => {
     if (err) throw err;
     console.log(data);
 });

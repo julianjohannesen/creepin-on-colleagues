@@ -1,5 +1,7 @@
 # Creepin' on Colleagues
 
+Deployed here: http://creepin-on-colleagues.herokuapp.com/
+
 ## What is this?
 
 Creepin' on Colleagues is a toy app that allows Treehouse students to "creep" on each other's progress though the Treehouse curriculum. 
@@ -12,4 +14,4 @@ Creepin' on Colleagues is a Node.js app built with Express.js and serving a stat
 
 The request to Treehouse for student profile data is handled server-side, which is not typical and adds additional overhead to the server. The reason for requesting data server-side was to demonstrate how that might be done. Ordinarily, the request would be made client-side, sparing the server the work.
 
-The app is deployed on Heroku. 
+The app is deployed on Heroku.
