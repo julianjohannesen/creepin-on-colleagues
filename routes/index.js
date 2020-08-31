@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const bodyParser = require("body-parser");
 const { asyncHandler, validate, getPage, processProfile } = require("../helpers.js");
 
-router.use(bodyParser.json());
-router.use(bodyParser.urlencoded({"extended":"true"}));
+router.use(express.json());
+router.use(express.urlencoded({"extended":"true"}));
 
 // Profile data holder
 let profile;

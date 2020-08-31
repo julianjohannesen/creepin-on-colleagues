@@ -3,7 +3,6 @@
 //!NOTE: I need to refactor the validate function to be more flexible, e.g. take any number of string parameters and validate each
 
 const { body, validationResult } = require("express-validator");
-const request = require("request");
 const { courses } = require("./courses.json");
 
 // asyncHandler returns an asynchronous callback (a route handler) wrapped in a try catch block
@@ -19,32 +18,34 @@ function asyncHandler(cb){
 
 // Validate will validate the submitted form field using express-validate module The parameter is an array of validations. As it appears in the index.js route, there's only one: body("username"). The validation methods are then chained to the returned result.
 function validate(string){
+	// Return a middleware
 	return async (req, res, next) => {
+		// The validations array only contains one validation at the moment, so using an array may seem like overkill, but any number of validations could appear here
         const validations = [
             body(string).not().isEmpty().isAlphanumeric().trim().isLength({ min: 2, max: 50 }),
-        ];
+		];
+		// Await the resolution of running each validation test
 		await Promise.all(validations.map(validation => validation.run(req)));
+		// The tests return a results function
 		const errors = validationResult(req);
+		// If the errors object is empty, move on to the next middleware
 		if (errors.isEmpty()) return next();
+		// Otherwise render the error template, passing in the errors array
 		res.status(422).render("error", { errors: errors.array(), status: "Error 422" });
 	};
 }  
 
-// getPage will return a promise to fetch a string containing json data from the supplied url using the request module. On error the promise is rejected, on success, the string is parsed to json, and the promise resolves with the fetched data.
-function getPage(url){
-
-	// Return a promise
-	return new Promise( (resolve,reject) => {
-
-		// Fetch the page with request module
-		request(url, callback);
-
-		// The request module callback
-		function callback(err, res, body){
-			// Handle reject and resolve cases
-			if(err){ reject(err) } // this is failing.	
-			else{ resolve(JSON.parse(body)) }
-		}
+// getPage wraps a fetch call in an async handler
+function getPage(url,options){
+	asyncHandler((req,res,next)=>{
+		return fetch(url, options).then( response => {
+			// Fetch considers HTTP errors to be successes, so catch HTTP errors here
+			if(!response.ok) {
+				throw Error(response.statusText)
+			} else {
+				return response.json();
+			}
+		});
 	});
 }
 
@@ -53,7 +54,7 @@ function processProfile(profile){
 	// "Badges" is an array of course objects. Using reduce(), for each "badge", we'll push that badge's courses to a parentCourse array or to the accumulator, which we'll store in childCourses.
 	let parentCourses = [];
 
-	let childCourses = profile.badges
+	const childCourses = profile.badges
 		.reduce((acc, currentBadge, ind) => {
 			// Test whether the first course in cur have already been added to the accumulator. The badge courses array lists the parent course first, before listing child courses.
 			if (currentBadge.courses.length > 0) {
@@ -88,7 +89,7 @@ function processProfile(profile){
 }
 
 // Slow down
-// I want to request a page using the request module
+// I want to request a page using the request module (or fetch)
 // Then I want to take the page html and process it by selecting dom elements and getting their text content etc.
 // After processing the page html, I'll have an array of objects
 // Then I want to stringify the array (JSON.stringify)

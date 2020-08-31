@@ -9,29 +9,28 @@
     "serverstart": "DEBUG=creepin-on-colleagues:* npm run devstart"
   },
   "engines": {
-    "node": "^13.3.0"
+    "node": "^14.9.0"
   },
   "author": "Julian Johannesen <julian.johannesen@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cookie-parser": "^1.4.4",
+    "cookie-parser": "^1.4.5",
     "debug": "^4.1.1",
     "express": "^4.17.1",
-    "express-validator": "^6.3.0",
-    "http-errors": "^1.7.3",
-    "morgan": "^1.9.1",
+    "express-validator": "^6.6.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "pug": "^2.0.4",
-    "request": "^2.88.0",
+    "pug": "^3.0.0",
+    "request": "^2.88.2",
     "serve-favicon": "^2.5.0"
   },
   "bugs": {
-    "url": "git@github.com:julianjohannesen/learn-heroku.git/issues/",
+    "url": "git@github.com:julianjohannesen/creapin-on-colleagues.git/issues/",
     "email": "julian.johannesen@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:julianjohannesen/learn-heroku.git"
+    "url": "git@github.com:julianjohannesen/creapin-on-colleagues.git"
   }
 }
