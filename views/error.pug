@@ -5,8 +5,8 @@ block content
     div.error
         //- if single error
         if error 
-            h2= error.status
-            div #{error.stack}
+            h2= status
+            div= error.stack
         //- express-validator returns an array of errors
         else
             h2= `${status}: ${errors[0].msg} for ${errors[0].param}`

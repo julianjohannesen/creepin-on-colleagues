@@ -1,14 +1,14 @@
 const { body, validationResult } = require("express-validator");
 
-// Validate will validate the submitted form field using express-validate. The parameter is an array of validations. As it appears in the index.js route, there's only one: body("username"). The validation methods are then chained to the returned result.
-export default function validate (["username"]) {
-	// Return a middleware
-	return (req, res, next) => {
-        // Use express-validator's body() method to check that req.body.username is valid
-		// The validations array only contains one validation at the moment, so using an array may seem like overkill, but any number of validations could appear here
-        const validations = [
-            body("username").not().isEmpty().isAlphanumeric().trim().isLength({ min: 2, max: 50 }),
-		];
+const validationsArray = [
+    body("username").not().isEmpty().isAlphanumeric().trim().isLength({ min: 2, max: 50 }),
+];
+
+// Validate will validate the submitted form fields using express-validate. The parameter is an array of validations. Each validation is a call to body(), check(), etc. The validation methods are chained to the call. On success, the function returns the next() method, otherwise it renders the error page.
+function validate (validations) {
+
+	// Return a middleware to use on any route
+	return async (req, res, next) => {
 		// Await the resolution of running each validation test, e.g. body().blah().blah().run()
 		await Promise.all(validations.map(validation => validation.run(req)));
 		// The tests return a results function
@@ -19,3 +19,8 @@ export default function validate (["username"]) {
 		res.status(422).render("error", { errors: errors.array(), status: "Error 422" });
 	};
 }  
+
+module.exports = {
+    validationsArray, 
+    validate
+}
