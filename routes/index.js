@@ -1,9 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { getProfile, processProfile, validate:{validate}, validate:{validationsArray} } = require('../middlewares/index.js');
-//const {validate, validationsArray} = require("../middlewares/validate.js");
-
-console.log(getProfile, validate);
 
 router.use(express.json());
 router.use(express.urlencoded({"extended":"true"}));

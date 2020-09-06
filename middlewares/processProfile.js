@@ -39,10 +39,10 @@ module.exports = function processProfile(){
 	// asyncHandler returns an async function that awaits the resolution of a callback passed in to it.
 	return asyncHandler(
 		// The callback takes the profile JSON and collects a list of the names of series and individual courses. Here I'm calling them parent and child courses.
-		(req,res) => {
+		(req,res,next) => {
 
-			const profileJSON = res.profile
-			console.log(res.profile)
+			const profileJSON = res.fetchedPage;
+			console.log("inside processProfile", res.fetchedPage)
 		
 			let parentCourses = [];
 			

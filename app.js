@@ -48,9 +48,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
     // Set message to err.message 
 	res.locals.message = err.message;
-	console.log(err)
-	// Insert new lines in stack trace
-	//res.locals.trace = err.stack ? err.stack.replace("at", "\nat") : null;
+
     // In development, req.local.error is set to err
 	res.locals.error = req.app.get("env") === "development" ? err : {};
 
